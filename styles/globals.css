@@ -20,3 +20,18 @@ body {
 svg {
   cursor: pointer;
 }
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #6783aa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #253649;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

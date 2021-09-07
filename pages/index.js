@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css"
 import HM from "./../UI/home"
 import axios from "axios"
 import { Language as L } from "./../UI/language"
+import WorldInfo from "./../UI/WorldWideInfo"
 
 const GetGeo = async () => {
   const Response = await axios
@@ -48,6 +49,7 @@ const App = () => {
         textdesc={Lan.homepara}
         bored={Lan.bored}
       />
+      <WorldInfo ttccases={Lan.ttctitle} />
     </div>
   )
 }

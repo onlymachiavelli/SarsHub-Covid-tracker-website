@@ -67,9 +67,18 @@
 #bored {
   color: #fff;
   text-align: center;
-  font-size: 40px;
-  margin-top: 20px;
+  font-size: 37px;
+  margin-top: 30px !important;
   font-weight: bold;
+  background: linear-gradient(132.63deg, #e25555 19.05%, #ffb762 80.97%);
+  display: block;
+  width: 400px;
+  height: 80px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 .bto {
   width: 100%;
