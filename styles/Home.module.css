@@ -23,23 +23,25 @@
 .geoloc {
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 23px;
   align-items: center;
   justify-content: center;
   display: flex;
   border-radius: 50px;
-  width: 120px;
+  width: 100px;
   border: 2px solid #fff;
+  height: 40px;
   background: rgba(255, 255, 255, 0.418);
 }
 .flag_geo {
   border-radius: 50%;
   overflow: hidden;
-  width: 37px;
-  height: 37px !important;
+  width: 30px;
+  height: 30px !important;
   align-items: center;
   justify-content: center;
   display: flex;
+
   overflow: hidden !important;
 }
 .geoloc p {
@@ -68,4 +70,26 @@
   font-size: 40px;
   margin-top: 20px;
   font-weight: bold;
+}
+.bto {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+}
+.social {
+  display: absolute;
+  left: 20px;
+  margin-left: 20px;
+}
+
+@media (max-width: 762px) {
+  #desc_txt {
+    width: 90%;
+    font-size: 27px;
+  }
+  #bored {
+    font-size: 40px;
+  }
 }

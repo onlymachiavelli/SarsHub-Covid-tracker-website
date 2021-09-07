@@ -1,5 +1,12 @@
 import React from "react"
-import { CovidLinear, SarsHub } from "./SVG"
+import {
+  CovidLinear,
+  Github,
+  Instagram,
+  Linkedin,
+  SarsHub,
+  Twitter,
+} from "./SVG"
 import styles from "./../styles/Home.module.css"
 import Link from "next/link"
 const Home = (props) => {
@@ -29,6 +36,26 @@ const Home = (props) => {
       <div className={styles.desc}>
         <p id={styles.desc_txt}> {props.textdesc}</p>
         <p id={styles.bored}>{props.bored}</p>
+      </div>
+      <div className={styles.bto}>
+        <div className={styles.social}>
+          <Link href="">
+            <Github />
+          </Link>
+          &nbsp;&nbsp;
+          <Link href="">
+            <Twitter />
+          </Link>
+          &nbsp;&nbsp;
+          <Link href="">
+            <Instagram />
+          </Link>
+          &nbsp;&nbsp;
+          <Link href="">
+            <Linkedin />
+          </Link>
+        </div>
+        <div className={styles.languageselector}></div>
       </div>
     </div>
   )

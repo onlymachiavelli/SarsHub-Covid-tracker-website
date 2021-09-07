@@ -17,3 +17,6 @@ body {
   text-decoration: none;
   font-family: "nunito";
 }
+svg {
+  cursor: pointer;
+}
