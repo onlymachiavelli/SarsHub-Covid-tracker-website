@@ -87,7 +87,8 @@
 @media (max-width: 762px) {
   #desc_txt {
     width: 90%;
-    font-size: 27px;
+    font-size: 25px;
+    text-align: left;
   }
   #bored {
     font-size: 40px;
