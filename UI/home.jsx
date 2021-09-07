@@ -1,10 +1,23 @@
 import React from "react"
-import { CovidLinear } from "./SVG"
+import { CovidLinear, SarsHub } from "./SVG"
 import styles from "./../styles/Home.module.css"
-const Home = () => {
+import Link from "next/link"
+const Home = (props) => {
   return (
     <div className={styles.home_container}>
-      <CovidLinear />
+      <header className={styles.header}>
+        <div className={styles.colin}>
+          <CovidLinear />
+        </div>
+        <div className={styles.mainlogo}>
+          <Link href="/">
+            <SarsHub />
+          </Link>
+        </div>
+        <div className={styles.geoloc}>
+          <p>Maroc</p>
+        </div>
+      </header>
     </div>
   )
 }

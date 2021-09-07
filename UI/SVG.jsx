@@ -30,7 +30,7 @@ export const CovidLinear = () => {
   )
 }
 
-export const SarsHum = () => {
+export const SarsHub = () => {
   return (
     <svg
       width="133"

@@ -6,3 +6,25 @@
   width: 100%;
   height: 100vh;
 }
+.header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.colin {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+.main_logo {
+}
+
+.geoloc {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
