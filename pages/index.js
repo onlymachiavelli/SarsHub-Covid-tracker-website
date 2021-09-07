@@ -41,7 +41,7 @@ export default function App() {
   console.log(Country)
   return (
     <div className={styles.pg}>
-      <HM />
+      <HM country={Country.Country} countryC={Country.CountryCode} />
     </div>
   )
 }
