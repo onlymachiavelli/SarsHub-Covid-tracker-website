@@ -27,4 +27,22 @@
   align-items: center;
   justify-content: center;
   display: flex;
+  border-radius: 50px;
+  width: 120px;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.418);
+}
+.flag_geo {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 37px;
+  height: 37px !important;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  overflow: hidden !important;
+}
+.geoloc p {
+  color: #fff;
+  font-size: 14px;
 }
