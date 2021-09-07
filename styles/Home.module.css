@@ -67,7 +67,7 @@
 #bored {
   color: #fff;
   text-align: center;
-  font-size: 37px;
+  font-size: 30px;
   margin-top: 30px !important;
   font-weight: bold;
   background: linear-gradient(132.63deg, #e25555 19.05%, #ffb762 80.97%);
@@ -100,6 +100,13 @@
     text-align: left;
   }
   #bored {
-    font-size: 40px;
+    font-size: 30px;
   }
+}
+
+.titletxt {
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
 }

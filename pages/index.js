@@ -14,9 +14,6 @@ const GetGeo = async () => {
   return Response
 }
 
-GetGeo().then((res) => {
-  console.log(res)
-})
 const useCountry = () => {
   const [Country, setCountry] = useState({
     CountryCode: "",
@@ -33,6 +30,15 @@ const useCountry = () => {
 
   return { Country }
 }
+
+const WorldCovid = async () => {
+  const Response = await axios
+    .get(`https://disease.sh/v3/covid-19/all`)
+    .then((res) => res.data)
+  return Response
+}
+
+WorldCovid().then((res) => console.log(res))
 
 const App = () => {
   const { Country } = useCountry()
