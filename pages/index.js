@@ -33,16 +33,22 @@ const useCountry = () => {
   return { Country }
 }
 
-export default function App() {
-  useEffect(() => {
-    document.title = "SARSHUBE | THE COVID19 TRACKER"
-  })
-
+const App = () => {
   const { Country } = useCountry()
   const [Lan, setLan] = useState(L.English)
+  useEffect(() => {
+    document.title = Lan.windowtitle
+  })
+
   return (
     <div className={styles.pg}>
-      <HM country={Country.Country} countryC={Country.CountryCode} />
+      <HM
+        country={Country.Country}
+        countryC={Country.CountryCode}
+        textdesc={Lan.homepara}
+        bored={Lan.bored}
+      />
     </div>
   )
 }
+export default App

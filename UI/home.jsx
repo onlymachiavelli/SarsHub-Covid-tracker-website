@@ -2,7 +2,6 @@ import React from "react"
 import { CovidLinear, SarsHub } from "./SVG"
 import styles from "./../styles/Home.module.css"
 import Link from "next/link"
-
 const Home = (props) => {
   return (
     <div className={styles.home_container}>
@@ -28,7 +27,8 @@ const Home = (props) => {
         </div>
       </header>
       <div className={styles.desc}>
-        <p></p>
+        <p id={styles.desc_txt}> {props.textdesc}</p>
+        <p id={styles.bored}>{props.bored}</p>
       </div>
     </div>
   )

@@ -49,4 +49,23 @@
 .desc {
   width: 100%;
   height: auto;
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+#desc_txt {
+  color: #fff;
+  margin: auto;
+  width: 72%;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+#bored {
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 20px;
+  font-weight: bold;
 }
