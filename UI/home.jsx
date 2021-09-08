@@ -39,7 +39,10 @@ const Home = (props) => {
         </div>
       </header>
 
-      {props.worldcovidcomponent}
+      <div className={styles.ff}>
+
+        {props.worldcovidcomponent}
+      </div>
 
 
       <div className={styles.bto}>
