@@ -38,21 +38,46 @@ const WorldCovid = async () => {
   return Response
 }
 
-WorldCovid().then((res) => console.log(res))
+
+
 
 
 
 const useWorldCovid = () => {
   const [Wcovid, setWcovid] = useState({
+    totalcases: "",
+    totaldeaths: "",
+    totalrecovered: "",
+    todaycases: "",
+    todaydeaths: "",
+    todayrecovered: "",
+    activecases: "",
+    critival: "",
 
   })
-
   useEffect(() => {
-
+    WorldCovid().then(
+      (Response) => {
+        setWcovid({
+          totalcases: Response.cases,
+          totaldeaths: Response.deaths,
+          totalrecovered: Response.recovered,
+          todaycases: Response.todayCases,
+          todaydeaths: Response.todayDeaths,
+          todayrecovered: Response.todayRecovered,
+          activecases: Response.active,
+          critical: Response.critical,
+        })
+      }
+    )
   }, [])
+  return { Wcovid }
 }
 
 const App = () => {
+  console.log(useWorldCovid().Wcovid)
+  const { Wcovid } = useWorldCovid()
+
   const { Country } = useCountry()
   const [Lan, setLan] = useState(L.English)
   useEffect(() => {
@@ -64,10 +89,20 @@ const App = () => {
       <Home
         country={Country.Country}
         countryC={Country.CountryCode}
-        textdesc={Lan.homepara}
-        bored={Lan.bored}
         worldcovidcomponent={
-          <WorldInfo />
+          <WorldInfo
+            titles={Lan.cards}
+            tcases={Wcovid.totalcases}
+            tdeaths={Wcovid.totaldeaths}
+            trec={Wcovid.totalrecovered}
+
+            tdcases={Wcovid.todaycases}
+            tddeaths={Wcovid.todaydeaths}
+            tdrec={Wcovid.todayrecovered}
+            active={Wcovid.activecases}
+            crit={Wcovid.critical}
+
+          />
         }
       />
     </div>
