@@ -20,10 +20,6 @@ const WorldInfo = (props) => {
         </div>
       </div>
 
-
-
-
-
       <div className={styles.flex_info_container} id={styles.flex_longer}>
         <div className={styles.flex_info_container}>
           <div className={styles.worldinfocard}>

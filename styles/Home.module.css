@@ -101,9 +101,7 @@
   position: relative;
   display: block;
   overflow: hidden;
-  top:7px;
   font-weight: 600;
-  left: 7px;  
 }
 .cardnum{
   color:#fff;
@@ -124,6 +122,50 @@
   background-color: #23E058;
   border-top: 10px solid #0AB83B;
 }
+@media(max-width:984px){
+  #flex_longer{
+    display: block;
+  }
+}
 
+@media(max-width:598px){
+  .worldinfocard{
+    width:150px;
+    height:120px;
+  }
+  #card_title{
+    display: block;
+    margin:auto;
+    margin-top:20px !important;
+  }
+}
 
+@media(max-width:470px){
+  .worldinfocard{
+    display: block !important;
+    width:70%;
+    height:70px;
+    margin:auto;
 
+    
+  }
+  .worlinfo_container{
+    display: block !important;
+  }
+  .flex_info_container{
+    display: block !important;
+  }
+  .social{
+    display: none;
+  }
+  .ff{
+    top:initial !important;
+    transform: translateY(0%) !important;
+  }
+  .home_container{
+    height: auto !important;; 
+  }
+  #card_title{
+    margin-top:10px !important;
+  }
+}
