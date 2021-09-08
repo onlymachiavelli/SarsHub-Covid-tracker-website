@@ -5,12 +5,13 @@ export const Language = {
     cards: {
       totalcases: "TOTAL CASES",
       totaldeathcases: "TOTAL DEATH CASES",
-      totalrecoveredcases: "TOTAL RECOVERED CASES",
+      totalrecoveredcases: "TOTAL RECOVERED ",
       todaycases: "TODAY CASES",
       todaydeaths: "TODAY DEATHS",
-      todayrecovered: "TODAYRECOVERED",
+      todayrecovered: "TODAY RECOVERED",
       activecases: "ACTIVE CASES",
-      critical: "CRITICAL"
+      critical: "CRITICAL",
+      glovecases: "GLOBE COVID19 CASES"
     }
 
 

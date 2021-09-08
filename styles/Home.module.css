@@ -79,7 +79,7 @@
 }
 .flex_info_container{
 
-  width:100%;
+  width:auto;
   height:auto;
   display: flex;
   background-color: auto;
@@ -98,11 +98,12 @@
 #card_title{
   color:#fff;
   font-size:13px;
+  position: relative;
   display: block;
   overflow: hidden;
-  margin-top:7px;
+  top:7px;
   font-weight: 600;
-  margin-left: 7px;  
+  left: 7px;  
 }
 .cardnum{
   color:#fff;
@@ -123,3 +124,6 @@
   background-color: #23E058;
   border-top: 10px solid #0AB83B;
 }
+
+
+
