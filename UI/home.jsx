@@ -9,6 +9,12 @@ import {
 } from "./SVG"
 import styles from "./../styles/Home.module.css"
 import Link from "next/link"
+import WorldInfo from './WorldWideInfo'
+
+
+
+
+
 const Home = (props) => {
   return (
     <div className={styles.home_container}>
@@ -33,10 +39,12 @@ const Home = (props) => {
           </div>
         </div>
       </header>
-      <div className={styles.desc}>
-        <p id={styles.desc_txt}> {props.textdesc}</p>
-        <p id={styles.bored}>{props.bored}</p>
-      </div>
+
+      <WorldInfo
+
+      />
+
+
       <div className={styles.bto}>
         <div className={styles.social}>
           <Link href="">

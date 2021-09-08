@@ -5,8 +5,7 @@ import styles from "../styles/Home.module.css"
 import HM from "./../UI/home"
 import axios from "axios"
 import { Language as L } from "./../UI/language"
-import WorldInfo from "./../UI/WorldWideInfo"
-
+//gettingg geo location
 const GetGeo = async () => {
   const Response = await axios
     .get(`http://ip-api.com/json`)
@@ -30,7 +29,7 @@ const useCountry = () => {
 
   return { Country }
 }
-
+//getting world covid cases
 const WorldCovid = async () => {
   const Response = await axios
     .get(`https://disease.sh/v3/covid-19/all`)
@@ -39,6 +38,18 @@ const WorldCovid = async () => {
 }
 
 WorldCovid().then((res) => console.log(res))
+
+
+
+const useWorldCovid = () => {
+  const [Wcovid, setWcovid] = useState({
+
+  })
+
+  useEffect(() => {
+
+  }, [])
+}
 
 const App = () => {
   const { Country } = useCountry()
@@ -55,7 +66,6 @@ const App = () => {
         textdesc={Lan.homepara}
         bored={Lan.bored}
       />
-      <WorldInfo ttccases={Lan.ttctitle} />
     </div>
   )
 }
