@@ -4,7 +4,7 @@ import styles from "./../styles/Home.module.css"
 const WorldInfo = (props) => {
   return (
     <div className={styles.worldinfo_container} >
-      <p>{props.titles["globecases"]}</p>
+      <p className={styles.gl_title}>{props.titles["globecases"]}</p>
       <div className={styles.flex_info_container}>
         <div className={styles.worldinfocard}>
           <p id={styles.card_title}>{props.titles["totalcases"]}</p>
@@ -19,7 +19,6 @@ const WorldInfo = (props) => {
           <p className={styles.cardnum}>{props.trec}</p>
         </div>
       </div>
-
       <div className={styles.flex_info_container} id={styles.flex_longer}>
         <div className={styles.flex_info_container}>
           <div className={styles.worldinfocard}>
@@ -36,19 +35,16 @@ const WorldInfo = (props) => {
             <p className={styles.cardnum}>+ {props.tdrec}</p>
           </div>&nbsp;
         </div>
-
         <div className={styles.flex_info_container}>
-
           <div className={styles.worldinfocard}>
             <p id={styles.card_title}>{props.titles["activecases"]}</p>
             <p className={styles.cardnum}>{props.active}</p>
           </div>&nbsp;
-          <div className={styles.worldinfocard} >
+          <div className={styles.worldinfocard} id={styles.critical} >
             <p id={styles.card_title}>{props.titles["critical"]}</p>
             <p className={styles.cardnum}>{props.crit}</p>
           </div>
         </div>
-
       </div>
     </div>
   )

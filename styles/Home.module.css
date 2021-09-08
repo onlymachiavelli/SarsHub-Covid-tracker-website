@@ -71,7 +71,7 @@
 
 }
 .ff{
-  top:50%;
+  top:45%;
   transform: translateY(-50%);
   position: absolute;
   width:100%;
@@ -94,6 +94,10 @@
   background:#739DD6;
   border-top:10px solid #008DB3;
   
+}
+#critical{
+  background:#E71C1C;
+  border-top: 10px solid #DC6565 !important;
 }
 #card_title{
   color:#fff;
@@ -121,6 +125,12 @@
 #recovered_card{
   background-color: #23E058;
   border-top: 10px solid #0AB83B;
+}
+.gl_title{
+  color:#fff;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 5px;
 }
 @media(max-width:984px){
   #flex_longer{
