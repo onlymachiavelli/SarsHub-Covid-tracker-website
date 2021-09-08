@@ -9,7 +9,6 @@ import {
 } from "./SVG"
 import styles from "./../styles/Home.module.css"
 import Link from "next/link"
-import WorldInfo from './WorldWideInfo'
 
 
 
@@ -40,9 +39,7 @@ const Home = (props) => {
         </div>
       </header>
 
-      <WorldInfo
-
-      />
+      {props.worldcovidcomponent}
 
 
       <div className={styles.bto}>

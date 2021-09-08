@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react"
 import Head from "next/head"
 import Image from "next/image"
 import styles from "../styles/Home.module.css"
-import HM from "./../UI/home"
+import Home from "./../UI/home"
 import axios from "axios"
 import { Language as L } from "./../UI/language"
+import WorldInfo from './../UI/WorldWideInfo'
 //gettingg geo location
 const GetGeo = async () => {
   const Response = await axios
@@ -60,13 +61,17 @@ const App = () => {
 
   return (
     <div className={styles.pg}>
-      <HM
+      <Home
         country={Country.Country}
         countryC={Country.CountryCode}
         textdesc={Lan.homepara}
         bored={Lan.bored}
+        worldcovidcomponent={
+          <WorldInfo />
+        }
       />
     </div>
+
   )
 }
 export default App
