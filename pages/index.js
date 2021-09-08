@@ -6,7 +6,6 @@ import Home from "./../UI/home"
 import axios from "axios"
 import { Language as L } from "./../UI/language"
 import WorldInfo from './../UI/WorldWideInfo'
-//gettingg geo location
 const GetGeo = async () => {
   const Response = await axios
     .get(`http://ip-api.com/json`)
@@ -26,35 +25,18 @@ const useCountry = () => {
         Country: Res.country,
       })
     })
-  }, [])
+  }, [Country])
 
   return { Country }
 }
-//getting world covid cases
 const WorldCovid = async () => {
   const Response = await axios
     .get(`https://disease.sh/v3/covid-19/all`)
     .then((res) => res.data)
   return Response
 }
-
-
-
-
-
-
 const useWorldCovid = () => {
-  const [Wcovid, setWcovid] = useState({
-    totalcases: "",
-    totaldeaths: "",
-    totalrecovered: "",
-    todaycases: "",
-    todaydeaths: "",
-    todayrecovered: "",
-    activecases: "",
-    critival: "",
-
-  })
+  const [Wcovid, setWcovid] = useState({})
   useEffect(() => {
     WorldCovid().then(
       (Response) => {
@@ -74,12 +56,44 @@ const useWorldCovid = () => {
   return { Wcovid }
 }
 
-const App = () => {
-  console.log(useWorldCovid().Wcovid)
-  const { Wcovid } = useWorldCovid()
 
+const CoByCountr = async (Country) => {
+  const Response = await axios
+    .get(`https://disease.sh/v3/covid-19/countries/${Country}`)
+    .then((res) => res.data)
+  return Response
+}
+
+
+
+const GetCovidStatsByGeo = () => {
+  const [Gstats, setGstats] = useState({})
+  let Country = useCountry().Country
+  useEffect(() => {
+    CoByCountr(Country).then(
+      (Response) => {
+        setGstats({
+          totalcases: Response.cases,
+          totaldeaths: Response.deaths,
+          totalrecovered: Response.recovered,
+          todaycases: Response.todayCases,
+          todaydeaths: Response.todayDeaths,
+          todayrecovered: Response.todayRecovered,
+          activecases: Response.active,
+          critical: Response.critical,
+        })
+      }
+    )
+  }, [])
+  return { Gstats }
+}
+const App = () => {
+  const { Wcovid } = useWorldCovid()
   const { Country } = useCountry()
   const [Lan, setLan] = useState(L.English)
+  const { Gstats } = GetCovidStatsByGeo()
+
+
   useEffect(() => {
     document.title = Lan.windowtitle
   })
@@ -101,7 +115,6 @@ const App = () => {
             tdrec={Wcovid.todayrecovered}
             active={Wcovid.activecases}
             crit={Wcovid.critical}
-
           />
         }
       />
