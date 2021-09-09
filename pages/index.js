@@ -68,9 +68,14 @@ const CoByCountr = async (Country) => {
 
 const GetCovidStatsByGeo = () => {
   const [Gstats, setGstats] = useState({})
-  let Country = useCountry().Country
+  let [myCountry, setMyCountry] = useState("")
   useEffect(() => {
-    CoByCountr(Country).then(
+    GetGeo().then(
+      (res) => {
+        setMyCountry(res)
+      }
+    )
+    CoByCountr(myCountry).then(
       (Response) => {
         setGstats({
           totalcases: Response.cases,
