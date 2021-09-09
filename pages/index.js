@@ -6,9 +6,10 @@ import Home from "./../UI/home"
 import axios from "axios"
 import { Language as L } from "./../UI/language"
 import WorldInfo from './../UI/WorldWideInfo'
+import getIp from '../UI/getIp'
 const GetGeo = async () => {
   const Response = await axios
-    .get(`http://ip-api.com/json/`)
+    .get(`https://api.db-ip.com/v2/free/self`)
     .then((res) => res.data)
   return Response
 }
@@ -19,7 +20,7 @@ const useCountry = () => {
     GetGeo().then((Res) => {
       setCountry({
         CountryCode: Res.countryCode,
-        Country: Res.country,
+        Country: Res.countryName,
       })
     })
   }, [Country])
