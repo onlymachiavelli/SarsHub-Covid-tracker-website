@@ -47,19 +47,19 @@ const Home = (props) => {
 
       <div className={styles.bto}>
         <div className={styles.social}>
-          <Link href="">
+          <Link href="https://github.com/onlymachiavelli">
             <Github />
           </Link>
           &nbsp;&nbsp;
-          <Link href="">
+          <Link href="https://twitter.com/onlymachiavelli">
             <Twitter />
           </Link>
           &nbsp;&nbsp;
-          <Link href="">
+          <Link href="https://instagram.com/onlymachiavelli">
             <Instagram />
           </Link>
           &nbsp;&nbsp;
-          <Link href="">
+          <Link href="https://www.linkedin.com/in/alaa-ddin-472a651b9/">
             <Linkedin />
           </Link>
         </div>
