@@ -64,8 +64,6 @@ const CoByCountr = async (Country) => {
 
 
 
-/*
-
 const GetCovidStatsByGeo = () => {
   const [Gstats, setGstats] = useState({})
   let Countr = useCountry().Country
@@ -88,13 +86,13 @@ const GetCovidStatsByGeo = () => {
   }, [])
   return { Gstats }
 }
-*/
+
 const App = () => {
   const { Wcovid } = useWorldCovid()
   const { Country } = useCountry()
   const [Lan, setLan] = useState(L.English)
-  //const { Gstats } = GetCovidStatsByGeo()
-
+  const { Gstats } = GetCovidStatsByGeo()
+  console.log(Gstats)
 
   useEffect(() => {
     document.title = Lan.windowtitle
