@@ -179,3 +179,20 @@
     margin-top:10px !important;
   }
 }
+
+@media(max-width:419px){
+  .colin{
+    display: none !important;
+
+  }
+  .header{
+    display: block !important;
+  }
+  .main_logo{
+    position: absolute !important;
+    left:20px !important; 
+  }
+  .gl_title{
+    font-size: 20px !important;
+  }
+}
