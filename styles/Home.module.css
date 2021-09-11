@@ -231,3 +231,17 @@
   display: block;
 }
 
+.currentflex{
+  width:90%;
+  margin:auto;
+  display: flex;
+
+}
+.currentcard{
+  width:40%;
+  height:100px;
+  text-align: center;
+  background:#739DD6;
+  border-top:10px solid #008DB3;
+  margin:10px auto !important;
+}

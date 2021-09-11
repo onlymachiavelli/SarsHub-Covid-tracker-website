@@ -39,18 +39,18 @@ const CurrentCountry = (props) => {
                     </div>
                     <div className={styles.currentcard}>
                         <p>{props.titles.todaycases}</p>
-                        <p>{props.tdcases}</p>
+                        <p>+ {props.tdcases}</p>
                     </div>
                 </div>
 
                 <div className={styles.currentflex}>
                     <div className={styles.currentcard}>
                         <p>{props.titles.todaydeaths}</p>
-                        <p>{props.tddeaths}</p>
+                        <p>+ {props.tddeaths}</p>
                     </div>
                     <div className={styles.currentcard}>
                         <p>{props.titles.todayrecovered}</p>
-                        <p>{props.tdrec}</p>
+                        <p>+ {props.tdrec}</p>
                     </div>
                 </div>
 
