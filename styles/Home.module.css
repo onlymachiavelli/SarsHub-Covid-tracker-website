@@ -173,10 +173,14 @@
     transform: translateY(0%) !important;
   }
   .home_container{
-    height: auto !important;; 
+    padding-bottom:20px;
+    overflow: auto;
   }
   #card_title{
     margin-top:10px !important;
+  }
+  .current_country_container{
+    margin-top:35vh;/*just for a while*/
   }
 }
 
