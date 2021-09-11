@@ -25,7 +25,7 @@ const useCountry = () => {
     })
   }, [])
 
-  return { country }
+  return { country, setCountry }
 }
 const WorldCovid = async () => {
   const response = await axios
@@ -92,7 +92,7 @@ const useGetCovidStatsByGeo = () => {
 
 const App = () => {
   const { Wcovid } = useWorldCovid()
-  const { country } = useCountry()
+  const { country, setCountry } = useCountry()
   const [Lan, setLan] = useState(L.English)
   const { Gstats } = useGetCovidStatsByGeo()
   console.log(Gstats)

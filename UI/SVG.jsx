@@ -78,8 +78,8 @@ export const SarsHub = () => {
 export const Github = () => {
   return (
     <svg
-      width="20"
-      height="20"
+      width="16"
+      height="16"
       viewBox="0 0 11 11"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -97,8 +97,8 @@ export const Github = () => {
 export const Twitter = () => {
   return (
     <svg
-      width="20"
-      height="20"
+      width="16"
+      height="16"
       viewBox="0 0 11 11"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -113,8 +113,8 @@ export const Twitter = () => {
 export const Instagram = () => {
   return (
     <svg
-      width="19"
-      height="19"
+      width="15"
+      height="15"
       viewBox="0 0 11 11"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -132,8 +132,8 @@ export const Instagram = () => {
 export const Linkedin = () => {
   return (
     <svg
-      width="19"
-      height="19"
+      width="15"
+      height="15"
       viewBox="0 0 11 11"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
