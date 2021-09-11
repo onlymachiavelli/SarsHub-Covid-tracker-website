@@ -11,7 +11,8 @@ export const Language = {
       todayrecovered: "TODAY RECOVERED",
       activecases: "ACTIVE CASES",
       critical: "CRITICAL",
-      globecases: "GLOBAL COVID19 CASES"
+      globecases: "GLOBAL COVID19 CASES",
+      covidstatsinyoucountry: "COVID STATS IN YOUR COUNTRY",
     }
 
 

@@ -124,7 +124,8 @@ const App = () => {
 
 
       <CurrentCountry
-
+        titles={Lan.cards}
+        flag={country.CountryCode}
       />
     </div>
 
