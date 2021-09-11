@@ -245,3 +245,8 @@
   border-top:10px solid #008DB3;
   margin:10px auto !important;
 }
+
+.currentcard p{
+  color:#fff;
+  font-weight: bold;
+}

@@ -26,14 +26,14 @@ const CurrentCountry = (props) => {
                         <p>{props.titles.totalcases}</p>
                         <p>{props.tcases}</p>
                     </div>
-                    <div className={styles.currentcard}>
+                    <div className={styles.currentcard} id={styles.death_card}>
                         <p>{props.titles.totaldeathcases}</p>
                         <p>{props.tdeaths}</p>
                     </div>
                 </div>
 
-                <div className={styles.currentflex}>
-                    <div className={styles.currentcard}>
+                <div className={styles.currentflex} >
+                    <div className={styles.currentcard} id={styles.recovered_card}>
                         <p>{props.titles.totalrecoveredcases}</p>
                         <p>{props.trec}</p>
                     </div>
@@ -44,11 +44,11 @@ const CurrentCountry = (props) => {
                 </div>
 
                 <div className={styles.currentflex}>
-                    <div className={styles.currentcard}>
+                    <div className={styles.currentcard} id={styles.death_card}>
                         <p>{props.titles.todaydeaths}</p>
                         <p>+ {props.tddeaths}</p>
                     </div>
-                    <div className={styles.currentcard}>
+                    <div className={styles.currentcard} id={styles.recovered_card}>
                         <p>{props.titles.todayrecovered}</p>
                         <p>+ {props.tdrec}</p>
                     </div>
@@ -60,7 +60,7 @@ const CurrentCountry = (props) => {
                         <p>{props.titles.activecases}</p>
                         <p>{props.active}</p>
                     </div>
-                    <div className={styles.currentcard}>
+                    <div className={styles.currentcard} id={styles.critical}>
                         <p>{props.titles.critical}</p>
                         <p>{props.crit}</p>
                     </div>
