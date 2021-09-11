@@ -169,19 +169,19 @@
     display: none;
   }
   .ff{
-    top:initial !important;
+    top:auto !important;
     transform: translateY(0%) !important;
+
   }
   .home_container{
     padding-bottom:20px;
     overflow: auto;
+    margin-bottom: 300px;
   }
   #card_title{
     margin-top:10px !important;
   }
-  .current_country_container{
-    margin-top:35vh;/*just for a while*/
-  }
+  
 }
 
 @media(max-width:419px){
