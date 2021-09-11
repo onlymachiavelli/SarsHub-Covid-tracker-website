@@ -6,7 +6,7 @@ import Home from "./../UI/home"
 import axios from "axios"
 import { Language as L } from "./../UI/language"
 import WorldInfo from './../UI/WorldWideInfo'
-
+import CurrentCountry from "../UI/CurrentCountry"
 const GetGeo = async () => {
   const response = await axios
     .get(`https://api.db-ip.com/v2/free/self`)
@@ -120,6 +120,11 @@ const App = () => {
             crit={Wcovid.critical}
           />
         }
+      />
+
+
+      <CurrentCountry
+
       />
     </div>
 

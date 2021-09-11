@@ -198,3 +198,14 @@
 }
 
 
+.current_country_container{
+  width:100%;
+  height:auto;
+}
+.ContainerCu{
+  width:90%;
+  height:auto;
+  border:1px solid #fff;
+  border-radius:10px;
+  background:#2C4261;
+}
