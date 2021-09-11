@@ -23,7 +23,7 @@ const Home = (props) => {
         </div>
         <div className={styles.mainlogo}>
           <Link href="/">
-            <SarsHub />
+            <a><SarsHub /></a>
           </Link>
         </div>
         <div
@@ -33,7 +33,11 @@ const Home = (props) => {
           <p>{props.country}</p> &nbsp;
           <div className={styles.flag_geo}>
             <img
-              src={`https://www.countryflags.io/${props.countryC}/flat/64.png`}
+              src={
+                props.countryC
+                  ? `https://www.countryflags.io/${props.countryC}/flat/64.png`
+                  : ''
+              }
             />
           </div>
         </div>

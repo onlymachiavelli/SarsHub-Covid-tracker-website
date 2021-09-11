@@ -6,15 +6,16 @@ import Home from "./../UI/home"
 import axios from "axios"
 import { Language as L } from "./../UI/language"
 import WorldInfo from './../UI/WorldWideInfo'
+
 const GetGeo = async () => {
-  const Response = await axios
+  const response = await axios
     .get(`https://api.db-ip.com/v2/free/self`)
     .then((res) => res.data)
-  return Response
+  return response
 }
 
 const useCountry = () => {
-  const [Country, setCountry] = useState({})
+  const [country, setCountry] = useState({})
   useEffect(() => {
     GetGeo().then((Res) => {
       setCountry({
@@ -22,31 +23,31 @@ const useCountry = () => {
         Country: Res.countryName,
       })
     })
-  }, [Country])
+  }, [])
 
-  return { Country }
+  return { country }
 }
 const WorldCovid = async () => {
-  const Response = await axios
+  const response = await axios
     .get(`https://disease.sh/v3/covid-19/all/`)
     .then((res) => res.data)
-  return Response
+  return response
 }
 const useWorldCovid = () => {
   const [Wcovid, setWcovid] = useState({})
 
   useEffect(() => {
     WorldCovid().then(
-      (Response) => {
+      (res) => {
         setWcovid({
-          totalcases: Response.cases,
-          totaldeaths: Response.deaths,
-          totalrecovered: Response.recovered,
-          todaycases: Response.todayCases,
-          todaydeaths: Response.todayDeaths,
-          todayrecovered: Response.todayRecovered,
-          activecases: Response.active,
-          critical: Response.critical,
+          totalcases: res.cases,
+          totaldeaths: res.deaths,
+          totalrecovered: res.recovered,
+          todaycases: res.todayCases,
+          todaydeaths: res.todayDeaths,
+          todayrecovered: res.todayRecovered,
+          activecases: res.active,
+          critical: res.critical,
         })
       }
     )
@@ -55,23 +56,28 @@ const useWorldCovid = () => {
 }
 
 
-const CoByCountr = async (Country) => {
-  const Response = await axios
-    .get(`https://disease.sh/v3/covid-19/countries/${Country}/`)
+const getcovByCountr = async (country) => {
+  const response = await axios
+    .get(`https://disease.sh/v3/covid-19/countries/${country}/`)
     .then((res) => res.data)
-  return Response
+  return response
 }
 
 
 
-const GetCovidStatsByGeo = () => {
+const useGetCovidStatsByGeo = () => {
   const [Gstats, setGstats] = useState({})
-  let Countr = useCountry().Country
-  useEffect(() => {
-    CoByCountr(useCountry().Countr).then(
+  const { country } = useCountry()
+  useEffect(async () => {
+    if (country.Country) {
+
+      const covByCountry = await getcovByCountr(country.Country)
+      console.log(covByCountry)
+    }
+    /*
+    CoByCountr().then(
       (Response) => {
         setGstats({
-
           totalcases: Response.cases,
           totaldeaths: Response.deaths,
           totalrecovered: Response.recovered,
@@ -83,26 +89,26 @@ const GetCovidStatsByGeo = () => {
         })
       }
     )
-  }, [])
+    */
+  }, [country])
   return { Gstats }
 }
 
 const App = () => {
   const { Wcovid } = useWorldCovid()
-  const { Country } = useCountry()
+  const { country } = useCountry()
   const [Lan, setLan] = useState(L.English)
-  const { Gstats } = GetCovidStatsByGeo()
-  console.log(Gstats)
+  const { Gstats } = useGetCovidStatsByGeo()
 
   useEffect(() => {
     document.title = Lan.windowtitle
-  })
+  }, [Lan])
 
   return (
     <div className={styles.pg}>
       <Home
-        country={Country.Country}
-        countryC={Country.CountryCode}
+        country={country.Country}
+        countryC={country.CountryCode}
         worldcovidcomponent={
           <WorldInfo
             titles={Lan.cards}
