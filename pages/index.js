@@ -126,6 +126,16 @@ const App = () => {
       <CurrentCountry
         titles={Lan.cards}
         flag={country.CountryCode}
+        country={country.Country}
+        tcases={Gstats.totalcases}
+        tdeaths={Gstats.totaldeaths}
+        trec={Gstats.totalrecovered}
+
+        tdcases={Gstats.todaycases}
+        tddeaths={Gstats.todaydeaths}
+        tdrec={Gstats.todayrecovered}
+        active={Gstats.activecases}
+        crit={Gstats.critical}
       />
     </div>
 

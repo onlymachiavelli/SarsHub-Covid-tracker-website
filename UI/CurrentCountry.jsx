@@ -19,9 +19,51 @@ const CurrentCountry = (props) => {
                                 : ''
                         }
                     />
+                    <p id={styles.cname}>{props.country}</p>
                 </div>
                 <div className={styles.currentflex}>
+                    <div className={styles.currentcard}>
+                        <p>{props.titles.totalcases}</p>
+                        <p>{props.tcases}</p>
+                    </div>
+                    <div className={styles.currentcard}>
+                        <p>{props.titles.totaldeathcases}</p>
+                        <p>{props.tdeaths}</p>
+                    </div>
+                </div>
 
+                <div className={styles.currentflex}>
+                    <div className={styles.currentcard}>
+                        <p>{props.titles.totalrecoveredcases}</p>
+                        <p>{props.trec}</p>
+                    </div>
+                    <div className={styles.currentcard}>
+                        <p>{props.titles.todaycases}</p>
+                        <p>{props.tdcases}</p>
+                    </div>
+                </div>
+
+                <div className={styles.currentflex}>
+                    <div className={styles.currentcard}>
+                        <p>{props.titles.todaydeaths}</p>
+                        <p>{props.tddeaths}</p>
+                    </div>
+                    <div className={styles.currentcard}>
+                        <p>{props.titles.todayrecovered}</p>
+                        <p>{props.tdrec}</p>
+                    </div>
+                </div>
+
+
+                <div className={styles.currentflex}>
+                    <div className={styles.currentcard}>
+                        <p>{props.titles.activecases}</p>
+                        <p>{props.active}</p>
+                    </div>
+                    <div className={styles.currentcard}>
+                        <p>{props.titles.critical}</p>
+                        <p>{props.crit}</p>
+                    </div>
                 </div>
             </div>
         </div>
