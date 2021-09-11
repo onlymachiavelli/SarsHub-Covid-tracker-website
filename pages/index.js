@@ -71,25 +71,21 @@ const useGetCovidStatsByGeo = () => {
   useEffect(async () => {
     if (country.Country) {
 
-      const covByCountry = await getcovByCountr(country.Country)
-      console.log(covByCountry)
+      getcovByCountr(country.Country).then(
+        (Response) => {
+          setGstats({
+            totalcases: Response.cases,
+            totaldeaths: Response.deaths,
+            totalrecovered: Response.recovered,
+            todaycases: Response.todayCases,
+            todaydeaths: Response.todayDeaths,
+            todayrecovered: Response.todayRecovered,
+            activecases: Response.active,
+            critical: Response.critical,
+          })
+        }
+      )
     }
-    /*
-    CoByCountr().then(
-      (Response) => {
-        setGstats({
-          totalcases: Response.cases,
-          totaldeaths: Response.deaths,
-          totalrecovered: Response.recovered,
-          todaycases: Response.todayCases,
-          todaydeaths: Response.todayDeaths,
-          todayrecovered: Response.todayRecovered,
-          activecases: Response.active,
-          critical: Response.critical,
-        })
-      }
-    )
-    */
   }, [country])
   return { Gstats }
 }
@@ -99,6 +95,7 @@ const App = () => {
   const { country } = useCountry()
   const [Lan, setLan] = useState(L.English)
   const { Gstats } = useGetCovidStatsByGeo()
+  console.log(Gstats)
 
   useEffect(() => {
     document.title = Lan.windowtitle
