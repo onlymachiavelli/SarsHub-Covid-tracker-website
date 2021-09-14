@@ -324,3 +324,18 @@
     width:90%;
   }
 }
+
+.searchinp a{
+  display: block;
+  color:#fff;
+  width:200px;
+  height:50px;
+  margin:auto  !important;
+  margin-top:20px !important;
+  background-color: #E35655;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 50px;
+  font-weight: bold;
+}

@@ -9,6 +9,7 @@ import WorldInfo from './../src/UI/WorldWideInfo'
 import CurrentCountry from "../src/UI/CurrentCountry"
 import coffin from './../public/coffin.png'
 import { Search } from './../src/UI/SVG'
+import Link from 'next/link'
 const GetGeo = async () => {
   const response = await axios
     .get(`https://api.db-ip.com/v2/free/self`)
@@ -152,7 +153,10 @@ const App = () => {
           <button>
             <Search />
           </button>
+
         </div>
+        <Link href="/world">World List</Link>
+
       </div>
       <br /><br />
     </div>
