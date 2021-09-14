@@ -7,6 +7,7 @@ import axios from "axios"
 import { Language as L } from "./../src/UI/language"
 import WorldInfo from './../src/UI/WorldWideInfo'
 import CurrentCountry from "../src/UI/CurrentCountry"
+import coffin from './../public/coffin.png'
 const GetGeo = async () => {
   const response = await axios
     .get(`https://api.db-ip.com/v2/free/self`)
@@ -137,6 +138,8 @@ const App = () => {
         active={Gstats.activecases}
         crit={Gstats.critical}
       />
+
+      <div style={{ textAlign: "center", paddingTop: "30px", display: "block" }}><Image src={coffin} width="500" height="250" /></div>
     </div>
 
   )
