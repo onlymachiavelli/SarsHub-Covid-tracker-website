@@ -1,5 +1,5 @@
 import React, { } from 'react'
-import { } from "./SVG"
+import { Search } from "./SVG"
 
 const CovidSearch = (props) => {
     return (
