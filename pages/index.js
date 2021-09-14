@@ -149,10 +149,12 @@ const App = () => {
           {Lan.cosearch}
         </p>
         <div className={styles.input}>
-          <input type="text" placeholder="Enter Country" />
-          <button>
-            <Search />
-          </button>
+          <form>
+            <input type="text" placeholder="Enter Country" />
+            <button type={"submit"}>
+              <Search />
+            </button>
+          </form>
 
         </div>
         <Link href="/world">World List</Link>
