@@ -13,8 +13,8 @@ export const Language = {
       critical: "CRITICAL",
       globecases: "GLOBAL COVID19 CASES",
       covidstatsinyoucountry: "COVID STATS IN YOUR COUNTRY",
-    }
-
+    },
+    cosearch: "COVID19 STATS BY SEARCH"
 
   },
   French: {},

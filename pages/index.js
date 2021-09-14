@@ -8,6 +8,7 @@ import { Language as L } from "./../src/UI/language"
 import WorldInfo from './../src/UI/WorldWideInfo'
 import CurrentCountry from "../src/UI/CurrentCountry"
 import coffin from './../public/coffin.png'
+import { Search } from './../src/UI/SVG'
 const GetGeo = async () => {
   const response = await axios
     .get(`https://api.db-ip.com/v2/free/self`)
@@ -95,7 +96,9 @@ const App = () => {
   const { Wcovid } = useWorldCovid()
   const { country, setCountry } = useCountry()
   const [Lan, setLan] = useState(L.English)
+  const [visible, setVisibility] = useState(false)
   const { Gstats } = useGetCovidStatsByGeo()
+  const [countrysearch, setCountrySearch] = useState("")
   console.log(Gstats)
 
   useEffect(() => {
@@ -140,6 +143,18 @@ const App = () => {
       />
 
       <div style={{ textAlign: "center", paddingTop: "30px", display: "block" }}><Image src={coffin} width="500" height="250" /></div>
+      <div className={styles.searchinp}>
+        <p className={styles.gl_title}>
+          {Lan.cosearch}
+        </p>
+        <div className={styles.input}>
+          <input type="text" placeholder="Enter Country" />
+          <button>
+            <Search />
+          </button>
+        </div>
+      </div>
+      <br /><br />
     </div>
 
   )

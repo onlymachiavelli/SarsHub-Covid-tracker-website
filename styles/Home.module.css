@@ -280,3 +280,47 @@
     flex-direction:column !important;
   }
 }
+
+
+.searchinp{
+  width:100%;
+  height:auto;
+  text-align: center;
+  margin-top:70px;
+}
+.input{
+  width:600px;
+  height:auto;
+  display:flex;
+  background:#fff;
+  margin:auto;
+  margin-top:20px;
+  padding:5px 0px 5px 0px;
+  border-radius:50px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.input input{
+  width:85%;
+  padding:10px;
+  border-radius:50px;
+  border:none;
+  margin:5px;
+  font-weight: 800;
+  color:#2C4261;
+}
+.input button{
+  background:#E35655;
+  border:none;
+  width:42px;
+  height:42px;
+  border-radius: 50%;
+  padding-top:5px;
+
+}
+@media(max-width:710px){
+  .input{
+    width:90%;
+  }
+}
