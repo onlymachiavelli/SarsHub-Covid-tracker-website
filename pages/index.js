@@ -10,6 +10,7 @@ import CurrentCountry from "../src/UI/CurrentCountry"
 import coffin from './../public/coffin.png'
 import { Search } from './../src/UI/SVG'
 import Link from 'next/link'
+import CovidSearch from './../src/UI/search'
 const GetGeo = async () => {
   const response = await axios
     .get(`https://api.db-ip.com/v2/free/self`)
@@ -97,7 +98,7 @@ const App = () => {
   const { Wcovid } = useWorldCovid()
   const { country, setCountry } = useCountry()
   const [Lan, setLan] = useState(L.English)
-  const [visible, setVisibility] = useState(false)
+  const [vsble, setVisibility] = useState(false)
   const { Gstats } = useGetCovidStatsByGeo()
   const [countrysearch, setCountrySearch] = useState("")
 
@@ -159,7 +160,9 @@ const App = () => {
           </div>
           <p></p>
           <Link href="/world">{Lan.worldlist}</Link>
-
+          <CovidSearch
+            style={{ display: vsble }}
+          />
         </div>
         <br /><br />
 
