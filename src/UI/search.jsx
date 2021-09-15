@@ -3,7 +3,7 @@ import { Search } from "./SVG"
 
 const CovidSearch = (props) => {
     return (
-        <div>
+        <div className={searchResult} style={{ display: props.visibility }}>
 
         </div>
     )
