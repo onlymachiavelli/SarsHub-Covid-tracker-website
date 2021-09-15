@@ -100,7 +100,6 @@ const App = () => {
   const [visible, setVisibility] = useState(false)
   const { Gstats } = useGetCovidStatsByGeo()
   const [countrysearch, setCountrySearch] = useState("")
-  console.log(Gstats)
 
   useEffect(() => {
     document.title = Lan.windowtitle
@@ -158,7 +157,8 @@ const App = () => {
             </form>
 
           </div>
-          <Link href="/world">World List</Link>
+          <p></p>
+          <Link href="/world">{Lan.worldlist}</Link>
 
         </div>
         <br /><br />

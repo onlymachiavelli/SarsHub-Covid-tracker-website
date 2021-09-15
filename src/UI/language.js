@@ -15,7 +15,7 @@ export const Language = {
       covidstatsinyoucountry: "COVID STATS IN YOUR COUNTRY",
     },
     cosearch: "COVID19 STATS BY SEARCH"
-
+    , worldlist: "World List"
   },
   French: {},
   Arabic: {},
