@@ -295,19 +295,18 @@
   background:#fff;
   margin:auto;
   margin-top:20px;
-  padding:5px 0px 5px 0px;
+  padding:5px 0px 3px 0px;
   border-radius:50px;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 .input input{
   width:85%;
   padding:10px;
   border-radius:50px;
   border:none;
-  margin:5px;
   font-weight: 800;
+  margin:3px 5px 5px 5px;
   color:#2C4261;
 }
 .input button{
@@ -317,6 +316,7 @@
   height:42px;
   border-radius: 50%;
   padding-top:5px;
+  cursor: pointer;
 
 }
 @media(max-width:710px){

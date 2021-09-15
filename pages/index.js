@@ -149,7 +149,7 @@ const App = () => {
           {Lan.cosearch}
         </p>
         <div className={styles.input}>
-          <form>
+          <form style={{ width: "100%", height: "100%" }}>
             <input type="text" placeholder="Enter Country" />
             <button type={"submit"}>
               <Search />
@@ -161,7 +161,7 @@ const App = () => {
 
       </div>
       <br /><br />
-    </div>
+    </div >
 
   )
 }
