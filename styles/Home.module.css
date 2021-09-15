@@ -339,3 +339,17 @@
   border-radius: 50px;
   font-weight: bold;
 }
+
+@media(max-width:663px){
+  .input {
+    width:90%;
+  }
+  .input input{
+    width:80%;
+  }
+}
+@media(max-width:472px){
+  .input input{
+  width:70%;
+  }
+}

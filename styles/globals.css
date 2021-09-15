@@ -35,3 +35,19 @@ svg {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+@media(max-width:281px){
+  #page{
+    display:none !important;
+  }
+  #what{
+    display: block !important;
+  }
+}
+
+#what{
+  color:#fff;
+  font-weight: bold;
+  font-size: 10px;
+  display:none
+}

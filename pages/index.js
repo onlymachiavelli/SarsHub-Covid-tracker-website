@@ -108,60 +108,107 @@ const App = () => {
 
   return (
     <div className={styles.pg}>
-      <Home
-        country={country.Country}
-        countryC={country.CountryCode}
-        worldcovidcomponent={
-          <WorldInfo
-            titles={Lan.cards}
-            tcases={Wcovid.totalcases}
-            tdeaths={Wcovid.totaldeaths}
-            trec={Wcovid.totalrecovered}
+      <div id="page">
+        <Home
+          country={country.Country}
+          countryC={country.CountryCode}
+          worldcovidcomponent={
+            <WorldInfo
+              titles={Lan.cards}
+              tcases={Wcovid.totalcases}
+              tdeaths={Wcovid.totaldeaths}
+              trec={Wcovid.totalrecovered}
 
-            tdcases={Wcovid.todaycases}
-            tddeaths={Wcovid.todaydeaths}
-            tdrec={Wcovid.todayrecovered}
-            active={Wcovid.activecases}
-            crit={Wcovid.critical}
-          />
-        }
-      />
+              tdcases={Wcovid.todaycases}
+              tddeaths={Wcovid.todaydeaths}
+              tdrec={Wcovid.todayrecovered}
+              active={Wcovid.activecases}
+              crit={Wcovid.critical}
+            />
+          }
+        />
 
 
-      <CurrentCountry
-        titles={Lan.cards}
-        flag={country.CountryCode}
-        country={country.Country}
-        tcases={Gstats.totalcases}
-        tdeaths={Gstats.totaldeaths}
-        trec={Gstats.totalrecovered}
+        <CurrentCountry
+          titles={Lan.cards}
+          flag={country.CountryCode}
+          country={country.Country}
+          tcases={Gstats.totalcases}
+          tdeaths={Gstats.totaldeaths}
+          trec={Gstats.totalrecovered}
 
-        tdcases={Gstats.todaycases}
-        tddeaths={Gstats.todaydeaths}
-        tdrec={Gstats.todayrecovered}
-        active={Gstats.activecases}
-        crit={Gstats.critical}
-      />
+          tdcases={Gstats.todaycases}
+          tddeaths={Gstats.todaydeaths}
+          tdrec={Gstats.todayrecovered}
+          active={Gstats.activecases}
+          crit={Gstats.critical}
+        />
 
-      <div style={{ textAlign: "center", paddingTop: "30px", display: "block" }}><Image src={coffin} width="500" height="250" /></div>
-      <div className={styles.searchinp}>
-        <p className={styles.gl_title}>
-          {Lan.cosearch}
-        </p>
-        <div className={styles.input}>
-          <form style={{ width: "100%", height: "100%" }}>
-            <input type="text" placeholder="Enter Country" />
-            <button type={"submit"}>
-              <Search />
-            </button>
-          </form>
+        <div style={{ textAlign: "center", paddingTop: "30px", display: "block" }}><Image src={coffin} width="500" height="250" /></div>
+        <div className={styles.searchinp}>
+          <p className={styles.gl_title}>
+            {Lan.cosearch}
+          </p>
+          <div className={styles.input}>
+            <form style={{ width: "100%", height: "100%" }}>
+              <input type="text" placeholder="Enter Country" />
+              <button type={"submit"}>
+                <Search />
+              </button>
+            </form>
+
+          </div>
+          <Link href="/world">World List</Link>
 
         </div>
-        <Link href="/world">World List</Link>
+        <br /><br />
 
       </div>
-      <br /><br />
+      <div id="what" style={{ color: "#fff" }}>
+        ARE YOU USING NOKIA 3310 !!!!!
+        GET SOMETHING BIG !
+        THESE ARE THE ONLY INFORMATIONS THAT CAN FIT IN YOUR SCREEN !
+        <br />
+        World Infos
+        <br />
+        {Lan.cards.totalcases + " : " + Wcovid.totalcases}
+        <br />
+        {Lan.cards.totaldeathcases + " : " + Wcovid.totaldeaths}
+        <br />
+        {Lan.cards.totalrecoveredcases + " : " + Wcovid.totalrecovered}
+        <br />
+        {Lan.cards.todaycases + " : + " + Wcovid.todaycases}
+        <br />
+        {Lan.cards.todaydeaths + " : + " + Wcovid.todaydeaths}
+        <br />
+        {Lan.cards.todayrecovered + " : + " + Wcovid.todayrecovered}
+        <br />
+        {Lan.cards.activecases + " : " + Wcovid.activecases}
+        <br />
+        {Lan.cards.critical + " : " + Gstats.critical}
+        <br /><br />
+        {country.Country + " Informations"}
+
+        <br />
+        {Lan.cards.totalcases + " : " + Gstats.totalcases}
+        <br />
+        {Lan.cards.totaldeathcases + " : " + Gstats.totaldeaths}
+        <br />
+        {Lan.cards.totalrecoveredcases + " : " + Gstats.totalrecovered}
+        <br />
+
+        {Lan.cards.todaycases + " : + " + Gstats.todaycases}
+        <br />
+        {Lan.cards.todaydeaths + " : + " + Gstats.todaydeaths}
+        <br />
+        {Lan.cards.todayrecovered + " : + " + Gstats.todayrecovered}
+        <br />
+        {Lan.cards.activecases + " : " + Gstats.activecases}
+        <br />
+        {Lan.cards.critical + " : " + Gstats.critical}
+      </div>
     </div >
+
 
   )
 }
