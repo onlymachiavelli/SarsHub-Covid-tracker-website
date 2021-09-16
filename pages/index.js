@@ -11,20 +11,9 @@ import coffin from './../public/coffin.png'
 import { Search } from './../src/UI/SVG'
 import Link from 'next/link'
 import CovidSearch from './../src/UI/search'
-import getcovByCountr from './../src/apiCall/covbycountry'
-//to remove
-import WorldCovid from './../src/apiCall/worldcovid'
-import GetGeo from './../src/apiCall/geo'
-
 import useCountry from './../src/useHooks/useCountry'
 import useWorldCovid from './../src/useHooks/useWorldcovid'
 import useGetCovidStatsByGeo from './../src/useHooks/useGetCovidStatsByGeo'
-
-
-
-
-
-
 const App = () => {
   const { Wcovid } = useWorldCovid()
   const { country, setCountry } = useCountry()
