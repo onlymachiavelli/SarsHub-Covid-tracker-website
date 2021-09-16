@@ -21,16 +21,3 @@ export const Language = {
   Arabic: {},
   Deutch: {},
 }
-
-
-/*
-tcases
-tdeaths
-trec
-
-tdcases
-tddeaths
-tdrec
-active
-crit
-*/
