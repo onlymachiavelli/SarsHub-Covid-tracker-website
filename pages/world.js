@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './../styles/World.module.css'
-
-//https://disease.sh/v3/covid-19/countries/
+import { WorldCases } from './../src/apiCall/worldcovid'
 
 const World = () => {
     return (

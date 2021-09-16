@@ -7,4 +7,11 @@ const WorldCovid = async () => {
     return response
 }
 
+export const WorldCases = async () => {
+    const response = await axios.get("https://disease.sh/v3/covid-19/countries/").then(
+        res => res.data
+    )
+    return response
+}
+
 export default WorldCovid
