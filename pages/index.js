@@ -11,12 +11,11 @@ import coffin from './../public/coffin.png'
 import { Search } from './../src/UI/SVG'
 import Link from 'next/link'
 import CovidSearch from './../src/UI/search'
-const GetGeo = async () => {
-  const response = await axios
-    .get(`https://api.db-ip.com/v2/free/self`)
-    .then((res) => res.data)
-  return response
-}
+
+
+//to remove
+import WorldCovid from './../src/apiCall/worldcovid'
+import GetGeo from './../src/apiCall/geo'
 
 const useCountry = () => {
   const [country, setCountry] = useState({})
@@ -31,12 +30,7 @@ const useCountry = () => {
 
   return { country, setCountry }
 }
-const WorldCovid = async () => {
-  const response = await axios
-    .get(`https://disease.sh/v3/covid-19/all/`)
-    .then((res) => res.data)
-  return response
-}
+
 const useWorldCovid = () => {
   const [Wcovid, setWcovid] = useState({})
 
