@@ -17,27 +17,7 @@ import WorldCovid from './../src/apiCall/worldcovid'
 import GetGeo from './../src/apiCall/geo'
 
 import useCountry from './../src/useHooks/useCountry'
-const useWorldCovid = () => {
-  const [Wcovid, setWcovid] = useState({})
-
-  useEffect(() => {
-    WorldCovid().then(
-      (res) => {
-        setWcovid({
-          totalcases: res.cases,
-          totaldeaths: res.deaths,
-          totalrecovered: res.recovered,
-          todaycases: res.todayCases,
-          todaydeaths: res.todayDeaths,
-          todayrecovered: res.todayRecovered,
-          activecases: res.active,
-          critical: res.critical,
-        })
-      }
-    )
-  }, [])
-  return { Wcovid }
-}
+import useWorldCovid from './../src/useHooks/useWorldcovid'
 
 
 
