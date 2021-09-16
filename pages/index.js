@@ -3,7 +3,6 @@ import Head from "next/head"
 import Image from "next/image"
 import styles from "../styles/Home.module.css"
 import Home from "./../src/UI/home"
-import axios from "axios"
 import { Language as L } from "./../src/UI/language"
 import WorldInfo from './../src/UI/WorldWideInfo'
 import CurrentCountry from "../src/UI/CurrentCountry"
