@@ -16,20 +16,7 @@ import getcovByCountr from './../src/apiCall/covbycountry'
 import WorldCovid from './../src/apiCall/worldcovid'
 import GetGeo from './../src/apiCall/geo'
 
-const useCountry = () => {
-  const [country, setCountry] = useState({})
-  useEffect(() => {
-    GetGeo().then((Res) => {
-      setCountry({
-        CountryCode: Res.countryCode,
-        Country: Res.countryName,
-      })
-    })
-  }, [])
-
-  return { country, setCountry }
-}
-
+import useCountry from './../src/useHooks/useCountry'
 const useWorldCovid = () => {
   const [Wcovid, setWcovid] = useState({})
 
