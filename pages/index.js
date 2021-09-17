@@ -13,14 +13,16 @@ import CovidSearch from './../src/UI/search'
 import useCountry from './../src/useHooks/useCountry'
 import useWorldCovid from './../src/useHooks/useWorldcovid'
 import useGetCovidStatsByGeo from './../src/useHooks/useGetCovidStatsByGeo'
-
+import useSearch from './../src/useHooks/useSearch'
 const App = () => {
   const { Wcovid } = useWorldCovid()
   const { country, setCountry } = useCountry()
   const [Lan, setLan] = useState(L.English)
   const [vsble, setVisibility] = useState("none")
   const { Gstats } = useGetCovidStatsByGeo()
-  const [countrysearch, setCountrySearch] = useState("")
+  const { result, handleSearch, countrysearch, setCountrySearch } = useSearch()
+
+  console.log({ result })
 
   useEffect(() => {
     document.title = Lan.windowtitle
@@ -70,12 +72,12 @@ const App = () => {
             {Lan.cosearch}
           </p>
           <div className={styles.input}>
-            <form style={{ width: "100%", height: "100%" }}>
-              <input type="text" placeholder="Enter Country" />
-              <button type={"submit"}>
+            <div style={{ width: "100%", height: "100%" }} >
+              <input type="text" placeholder="Enter Country" value={countrysearch} onChange={e => setCountrySearch(e.target.value)} />
+              <button type={"submit"} onClick={handleSearch} >
                 <Search />
               </button>
-            </form>
+            </div>
 
           </div>
           <p></p>
