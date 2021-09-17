@@ -18,7 +18,7 @@ const App = () => {
   const { Wcovid } = useWorldCovid()
   const { country, setCountry } = useCountry()
   const [Lan, setLan] = useState(L.English)
-  const [vsble, setVisibility] = useState("block")
+  const [vsble, setVisibility] = useState("none")
   const { Gstats } = useGetCovidStatsByGeo()
   const { result, handleSearch, countrysearch, setCountrySearch } = useSearch()
 
@@ -74,7 +74,13 @@ const App = () => {
           <div className={styles.input}>
             <div style={{ width: "100%", height: "100%" }} >
               <input type="text" placeholder="Enter Country" value={countrysearch} onChange={e => setCountrySearch(e.target.value)} />
-              <button type={"submit"} onClick={handleSearch} >
+              <button type={"submit"} onClick={
+                () => {
+
+                  handleSearch()
+                  setVisibility("block")
+                }
+              } >
                 <Search />
               </button>
             </div>
