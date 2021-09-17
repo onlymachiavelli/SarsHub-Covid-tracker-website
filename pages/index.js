@@ -18,7 +18,7 @@ const App = () => {
   const { Wcovid } = useWorldCovid()
   const { country, setCountry } = useCountry()
   const [Lan, setLan] = useState(L.English)
-  const [vsble, setVisibility] = useState("block")
+  const [vsble, setVisibility] = useState("none")
   const { Gstats } = useGetCovidStatsByGeo()
   const [countrysearch, setCountrySearch] = useState("")
 
