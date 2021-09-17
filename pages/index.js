@@ -9,7 +9,7 @@ import CurrentCountry from "../src/UI/CurrentCountry"
 import coffin from './../public/coffin.png'
 import { Search } from './../src/UI/SVG'
 import Link from 'next/link'
-import CovidSearch from './../src/UI/search'
+import CovidSearch, { SearchResult } from './../src/UI/search'
 import useCountry from './../src/useHooks/useCountry'
 import useWorldCovid from './../src/useHooks/useWorldcovid'
 import useGetCovidStatsByGeo from './../src/useHooks/useGetCovidStatsByGeo'
@@ -108,6 +108,8 @@ const App = () => {
           />
         </div>
         <br /><br />
+
+
       </div>
       <div id="what" style={{ color: "#fff" }}>
         ARE YOU USING NOKIA 3310 !!!!!

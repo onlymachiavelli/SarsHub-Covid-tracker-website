@@ -1,6 +1,7 @@
 import React, { } from 'react'
 import { Search } from "./SVG"
 import styles from './../../styles/Home.module.css'
+import getcovByCountr from './../apiCall/covbycountry'
 const CovidSearch = (props) => {
     return (
         <div className={styles.searchResult} style={{ display: props.visibility }}>
@@ -65,4 +66,15 @@ const CovidSearch = (props) => {
         </div>
     )
 }
+
+
+
+export const SearchResult = (props) => {
+    return (
+        <div className={styles.errstatus}>
+            Not Found !
+        </div>
+    )
+}
+
 export default CovidSearch
