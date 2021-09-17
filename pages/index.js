@@ -13,6 +13,7 @@ import CovidSearch from './../src/UI/search'
 import useCountry from './../src/useHooks/useCountry'
 import useWorldCovid from './../src/useHooks/useWorldcovid'
 import useGetCovidStatsByGeo from './../src/useHooks/useGetCovidStatsByGeo'
+
 const App = () => {
   const { Wcovid } = useWorldCovid()
   const { country, setCountry } = useCountry()
