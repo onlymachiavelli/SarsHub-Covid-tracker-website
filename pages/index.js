@@ -17,7 +17,7 @@ const App = () => {
   const { Wcovid } = useWorldCovid()
   const { country, setCountry } = useCountry()
   const [Lan, setLan] = useState(L.English)
-  const [vsble, setVisibility] = useState(false)
+  const [vsble, setVisibility] = useState("block")
   const { Gstats } = useGetCovidStatsByGeo()
   const [countrysearch, setCountrySearch] = useState("")
 
@@ -80,11 +80,10 @@ const App = () => {
           <p></p>
           <Link href="/world">{Lan.worldlist}</Link>
           <CovidSearch
-            style={{ display: vsble }}
+            visibility={vsble}
           />
         </div>
         <br /><br />
-
       </div>
       <div id="what" style={{ color: "#fff" }}>
         ARE YOU USING NOKIA 3310 !!!!!

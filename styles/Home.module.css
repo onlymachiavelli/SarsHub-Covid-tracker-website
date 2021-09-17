@@ -256,6 +256,17 @@
   font-weight: bold;
 }
 
+.searchResult{
+  width:10%;
+  height:auto;
+  margin:auto !important; 
+}
+
+
+
+
+
+
 @media(max-width:579px){
   .currentcard{
     width:90% !important;
