@@ -79,8 +79,23 @@ const App = () => {
           </div>
           <p></p>
           <Link href="/world">{Lan.worldlist}</Link>
+          <br /><br />
           <CovidSearch
             visibility={vsble}
+            flag={"TN"}
+            titles={Lan.cards}
+
+
+            country={country.Country}
+            tcases={Gstats.totalcases}
+            tdeaths={Gstats.totaldeaths}
+            trec={Gstats.totalrecovered}
+
+            tdcases={Gstats.todaycases}
+            tddeaths={Gstats.todaydeaths}
+            tdrec={Gstats.todayrecovered}
+            active={Gstats.activecases}
+            crit={Gstats.critical}
           />
         </div>
         <br /><br />
