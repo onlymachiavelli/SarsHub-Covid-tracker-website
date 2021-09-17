@@ -18,7 +18,7 @@ const App = () => {
   const { Wcovid } = useWorldCovid()
   const { country, setCountry } = useCountry()
   const [Lan, setLan] = useState(L.English)
-  const [vsble, setVisibility] = useState("none")
+  const [vsble, setVisibility] = useState("block")
   const { Gstats } = useGetCovidStatsByGeo()
   const { result, handleSearch, countrysearch, setCountrySearch } = useSearch()
 
@@ -85,20 +85,20 @@ const App = () => {
           <br /><br />
           <CovidSearch
             visibility={vsble}
-            flag={"TN"}
+            flag={result.flag}
             titles={Lan.cards}
 
 
-            country={country.Country}
-            tcases={Gstats.totalcases}
-            tdeaths={Gstats.totaldeaths}
-            trec={Gstats.totalrecovered}
+            country={result.country}
+            tcases={result.totalcases}
+            tdeaths={result.totaldeaths}
+            trec={result.totalrecovered}
 
-            tdcases={Gstats.todaycases}
-            tddeaths={Gstats.todaydeaths}
-            tdrec={Gstats.todayrecovered}
-            active={Gstats.activecases}
-            crit={Gstats.critical}
+            tdcases={result.todaycases}
+            tddeaths={result.todaydeaths}
+            tdrec={result.todayrecovered}
+            active={result.activecases}
+            crit={result.critical}
           />
         </div>
         <br /><br />

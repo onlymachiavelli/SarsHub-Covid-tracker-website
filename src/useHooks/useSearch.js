@@ -19,6 +19,7 @@ const useSearch = () => {
                         activecases: res.active,
                         critical: res.critical,
                         flag: res.countryInfo.iso2,
+                        country: res.country
                     })
                 }
             )
