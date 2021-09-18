@@ -4,10 +4,10 @@ import GetGeo from './../apiCall/geo'
 const useCountry = () => {
     const [country, setCountry] = useState({})
     useEffect(() => {
-        GetGeo().then((Res) => {
+        GetGeo().then((res) => {
             setCountry({
-                CountryCode: Res.countryCode,
-                Country: Res.countryName,
+                CountryCode: res.countryCode,
+                Country: res.countryName,
             })
         })
     }, [])

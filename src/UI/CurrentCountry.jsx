@@ -19,7 +19,7 @@ const CurrentCountry = (props) => {
                                 : ''
                         }
                     />
-                    <p id={styles.cname}>{props.country}</p>
+                    <p id={styles.cname}>{props.country === "Tunisia" ? props.country + " Lkalba" : props.country}</p>
                 </div>
                 <div className={styles.currentflex}>
                     <div className={styles.currentcard}>
