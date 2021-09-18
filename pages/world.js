@@ -6,7 +6,7 @@ const World = () => {
     const [lan, setLan] = useState(Language.English)
     return (
         <div className={styles.world}>
-            <table>
+            <table className={styles.table}>
                 <tr>
                     <th>{lan.table.lvl}</th>
                     <th>{lan.table.country}</th>

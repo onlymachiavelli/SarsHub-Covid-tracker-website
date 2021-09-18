@@ -32,19 +32,13 @@ export const Language = {
       critical: "Serious Critical",
       cpom: "Cases Per 1Mil",
       dpom: "Deaths Per 1Mil",
-
       apom: "Active Per 1Mil",
       rpom: "Recovered Per 1Mil",
       crpom: "Critical Per 1Mil",
-
-
-
       tests: "Tests",
       tpom: "Tests Per 1Mil",
       ocpp: "One Case Per Ppl",
       odpp: "One Death Ppl",
-
-
     }
   },
   French: {},

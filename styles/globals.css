@@ -51,3 +51,7 @@ svg {
   font-size: 10px;
   display:none
 }
+
+table, th, td{
+  border-collapse: collapse;
+}
