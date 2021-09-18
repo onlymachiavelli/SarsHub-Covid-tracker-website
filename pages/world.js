@@ -9,6 +9,7 @@ const World = () => {
                 <tr>
                     <th>LVL</th>
                     <th>COUNTRY</th>
+                    <th>CONTINENT</th>
                     <th>FLAG</th>
                     <th>population</th>
                     <th>Total Cases</th>

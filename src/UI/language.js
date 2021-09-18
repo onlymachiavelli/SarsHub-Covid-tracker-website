@@ -15,7 +15,37 @@ export const Language = {
       covidstatsinyoucountry: "COVID STATS IN YOUR COUNTRY",
     },
     cosearch: "COVID19 STATS BY SEARCH"
-    , worldlist: "World List"
+    , worldlist: "World List",
+    table: {
+      lvl: "LVL",
+      country: "Country",
+      continent: "Continent",
+      flag: "Flag",
+      population: "Population",
+      tcases: "Total Cases",
+      trec: "Total Recovered",
+      tdeaths: "Total Deaths",
+      tdcases: "Today Cases",
+      tdrec: "Today Recovered",
+      tddeaths: "Today Deaths",
+      active: "Active Cases",
+      critical: "Serious Critical",
+      cpom: "Cases Per 1Mil",
+      dpom: "Deaths Per 1Mil",
+
+      apom: "Active Per 1Mil",
+      rpom: "Recovered Per 1Mil",
+      crpom: "Critical Per 1Mil",
+
+
+
+      tests: "Tests",
+      tpom: "Tests Per 1Mil",
+      ocpp: "One Case Per Ppl",
+      odpp: "One Death Ppl",
+
+
+    }
   },
   French: {},
   Arabic: {},
