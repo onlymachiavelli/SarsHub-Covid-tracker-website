@@ -7,29 +7,27 @@ const World = () => {
         <div className={styles.world}>
             <table>
                 <tr>
-                    <th>1</th>
-                    <th>Tunisia</th>
-                    <th><img src={"https://www.countryflags.io/TN/flat/64.png"} /></th>
+                    <th>LVL</th>
+                    <th>COUNTRY</th>
+                    <th>FLAG</th>
+                    <th>population</th>
                     <th>Total Cases</th>
-                    <th>todayCases</th>
-                    <th>deaths</th>
-                    <th>todayDeaths</th>
                     <th>recovered</th>
+                    <th>deaths</th>
+                    <th>todayCases</th>
                     <th>todayRecovered</th>
+                    <th>todayDeaths</th>
                     <th>active</th>
                     <th>critical</th>
                     <th>casesPerOneMillion</th>
                     <th>deathsPerOneMillion</th>
                     <th>tests</th>
                     <th>testsPerOneMillion</th>
-                    <th>population</th>
                     <th>oneCasePerPeople</th>
                     <th>oneDeathPerPeople</th>
                     <th>activePerOneMillion</th>
                     <th>recoveredPerOneMillion</th>
                     <th>criticalPerOneMillion</th>
-
-
                 </tr>
             </table>
         </div>
