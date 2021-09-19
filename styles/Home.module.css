@@ -62,173 +62,159 @@
   margin-left: 20px;
 }
 
-
-
-.worlinfo_container{
-
-  width:100%;
-  height:auto;
-
+.worlinfo_container {
+  width: 100%;
+  height: auto;
 }
-.ff{
-  top:45%;
+.ff {
+  top: 45%;
   transform: translateY(-50%);
   position: absolute;
-  width:100%;
+  width: 100%;
   text-align: center;
 }
-.flex_info_container{
-
-  width:auto;
-  height:auto;
+.flex_info_container {
+  width: auto;
+  height: auto;
   display: flex;
   background-color: auto;
   align-items: center;
   justify-content: center;
-  margin-top:20px;
-
+  margin-top: 20px;
 }
-.worldinfocard{
-  width:190px;
-  height:150px;
-  background:#739DD6;
-  border-top:10px solid #008DB3;
-  
+.worldinfocard {
+  width: 190px;
+  height: 150px;
+  background: #739dd6;
+  border-top: 10px solid #008db3;
 }
-#critical{
-  background:#E71C1C;
-  border-top: 10px solid #DC6565 !important;
+#critical {
+  background: #dc6565;
+  border-top: 10px solid #e71c1c !important;
 }
-#card_title{
-  color:#fff;
-  font-size:13px;
+#card_title {
+  color: #fff;
+  font-size: 13px;
   position: relative;
   display: block;
   overflow: hidden;
   font-weight: 600;
 }
-.cardnum{
-  color:#fff;
+.cardnum {
+  color: #fff;
   font-weight: bold;
   display: block;
   position: relative;
-  top:25%;
+  top: 25%;
   transform: translateY(-50%);
-  margin:auto;
+  margin: auto;
   text-align: center;
 }
 
-#death_card{
-  background-color: #DC6565;
-  border-top: 10px solid #E71C1C;
+#death_card {
+  background-color: #e71c1c;
+  border-top: 10px solid #dc6565;
 }
-#recovered_card{
-  background-color: #23E058;
-  border-top: 10px solid #0AB83B;
+#recovered_card {
+  background-color: #23e058;
+  border-top: 10px solid #0ab83b;
 }
-.gl_title{
-  color:#fff;
+.gl_title {
+  color: #fff;
   font-weight: bold;
   font-size: 25px;
   margin-bottom: 5px;
 }
-@media(max-width:984px){
-  #flex_longer{
+@media (max-width: 984px) {
+  #flex_longer {
     display: block;
   }
 }
 
-@media(max-width:598px){
-  .worldinfocard{
-    width:150px;
-    height:120px;
+@media (max-width: 598px) {
+  .worldinfocard {
+    width: 150px;
+    height: 120px;
   }
-  #card_title{
+  #card_title {
     display: block;
-    margin:auto;
-    margin-top:20px !important;
+    margin: auto;
+    margin-top: 20px !important;
   }
 }
 
-@media(max-width:470px){
-  .worldinfocard{
+@media (max-width: 470px) {
+  .worldinfocard {
     display: block !important;
-    width:70%;
-    height:70px;
-    margin:auto;
-
-    
+    width: 70%;
+    height: 70px;
+    margin: auto;
   }
-  .worlinfo_container{
+  .worlinfo_container {
     display: block !important;
   }
-  .flex_info_container{
+  .flex_info_container {
     display: block !important;
   }
-  .social{
+  .social {
     display: none;
   }
-  .ff{
-    top:auto !important;
+  .ff {
+    top: auto !important;
     transform: translateY(0%) !important;
-
   }
-  .home_container{
-    padding-bottom:20px;
+  .home_container {
+    padding-bottom: 20px;
     overflow: auto;
     margin-bottom: 300px;
   }
-  #card_title{
-    margin-top:10px !important;
+  #card_title {
+    margin-top: 10px !important;
   }
-  
 }
 
-@media(max-width:419px){
-  .colin{
+@media (max-width: 419px) {
+  .colin {
     display: none !important;
-
   }
-  .header{
+  .header {
     display: block !important;
   }
-  .main_logo{
+  .main_logo {
     position: absolute !important;
-    left:20px !important; 
+    left: 20px !important;
   }
-  .gl_title{
+  .gl_title {
     font-size: 20px !important;
   }
 }
 
-
-.current_country_container{
-  width:100%;
-  height:auto;
+.current_country_container {
+  width: 100%;
+  height: auto;
 }
-.ContainerCu{
-  width:90%;
-  height:auto;
-  border:1px solid #fff;
-  border-radius:10px;
-  background:#2C4261;
-  margin:auto;
-  padding:20px 0px 20px 0px;
-  margin-bottom:30px;
+.ContainerCu {
+  width: 90%;
+  height: auto;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background: #2c4261;
+  margin: auto;
+  padding: 20px 0px 20px 0px;
+  margin-bottom: 30px;
 }
 
-
-#flag_cur{
-  width:100px !important;
-  height:auto !important;
+#flag_cur {
+  width: 100px !important;
+  height: auto !important;
 }
-.cflag{
-  margin-left:20px ;
+.cflag {
+  margin-left: 20px;
   display: flex;
   align-items: center;
 }
-#cname{
-  color:#fff;
+#cname {
+  color: #fff;
   font-weight: bold;
 
   font-size: 20px;
@@ -236,114 +222,106 @@
   display: block;
 }
 
-.currentflex{
-  width:90%;
-  margin:auto;
+.currentflex {
+  width: 90%;
+  margin: auto;
   display: flex;
-
 }
-.currentcard{
-  width:40%;
-  height:100px;
+.currentcard {
+  width: 40%;
+  height: 100px;
   text-align: center;
-  background:#739DD6;
-  border-top:10px solid #008DB3;
-  margin:10px auto !important;
+  background: #739dd6;
+  border-top: 10px solid #008db3;
+  margin: 10px auto !important;
 }
 
-.currentcard p{
-  color:#fff;
+.currentcard p {
+  color: #fff;
   font-weight: bold;
 }
 
-.searchResult{
-  width:100%;
-  height:auto;
-  margin:auto !important; 
+.searchResult {
+  width: 100%;
+  height: auto;
+  margin: auto !important;
 }
 
-
-
-
-
-
-@media(max-width:579px){
-  .currentcard{
-    width:90% !important;
+@media (max-width: 579px) {
+  .currentcard {
+    width: 90% !important;
   }
-  .currentflex{
-    width:95% !important;
+  .currentflex {
+    width: 95% !important;
   }
 }
 
-@media(max-width:476px){
-  .currentcard p{
-    font-size:13px !important;   
+@media (max-width: 476px) {
+  .currentcard p {
+    font-size: 13px !important;
   }
-  .currentcard{
-    height:auto !important;
-    padding-bottom:10px;
-  }
-}
-
-@media(max-width:324px){
-  .currentflex{
-    flex-direction:column !important;
+  .currentcard {
+    height: auto !important;
+    padding-bottom: 10px;
   }
 }
 
+@media (max-width: 324px) {
+  .currentflex {
+    flex-direction: column !important;
+  }
+}
 
-.searchinp{
-  width:100%;
-  height:auto;
+.searchinp {
+  width: 100%;
+  height: auto;
   text-align: center;
-  margin-top:70px;
+  margin-top: 70px;
 }
-.input{
-  width:600px;
-  height:auto;
-  display:flex;
-  background:#fff;
-  margin:auto;
-  margin-top:20px;
-  padding:5px 0px 3px 0px;
-  border-radius:50px;
+.input {
+  width: 600px;
+  height: auto;
+  display: flex;
+  background: #fff;
+  margin: auto;
+  margin-top: 20px;
+  padding: 5px 0px 3px 0px;
+  border-radius: 50px;
   align-items: center;
   justify-content: center;
 }
-.input input{
-  width:85%;
-  padding:10px;
-  border-radius:50px;
-  border:none;
+.input input {
+  width: 85%;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
   font-weight: 800;
-  margin:3px 5px 5px 5px;
-  color:#2C4261;
+  margin: 3px 5px 5px 5px;
+  color: #2c4261;
 }
-.input button{
-  background:#E35655;
-  border:none;
-  width:42px;
-  height:42px;
+.input button {
+  background: #e35655;
+  border: none;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  padding-top:5px;
+  padding-top: 5px;
   cursor: pointer;
-
 }
-@media(max-width:710px){
-  .input{
-    width:90%;
+@media (max-width: 710px) {
+  .input {
+    width: 90%;
   }
 }
 
-.searchinp a{
+.searchinp a {
   display: block;
-  color:#fff;
-  width:200px;
-  height:50px;
-  margin:auto  !important;
-  margin-top:20px !important;
-  background-color: #E35655;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  margin: auto !important;
+  margin-top: 20px !important;
+  background-color: #e35655;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -351,33 +329,33 @@
   font-weight: bold;
 }
 
-@media(max-width:663px){
+@media (max-width: 663px) {
   .input {
-    width:90%;
+    width: 90%;
   }
-  .input input{
-    width:80%;
+  .input input {
+    width: 80%;
   }
 }
-@media(max-width:472px){
-  .input input{
-  width:70%;
+@media (max-width: 472px) {
+  .input input {
+    width: 70%;
   }
 }
 
-.errstatus{
-  width:70%;
-  height:auto;
-  margin:auto;
+.errstatus {
+  width: 70%;
+  height: auto;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  color:#fff;
+  color: #fff;
   font-weight: bold;
   background: #eb3434;
   font-size: 30px;
-  padding:20px 0px 20px 0px;
-  border-radius:20px;
-  border:2px solid #fff;
+  padding: 20px 0px 20px 0px;
+  border-radius: 20px;
+  border: 2px solid #fff;
   margin-bottom: 20px;
 }
