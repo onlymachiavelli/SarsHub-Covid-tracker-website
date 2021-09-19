@@ -47,13 +47,13 @@ const World = () => {
                   <th>{arr.continent}</th>
                   <th>{lan.table.flag}</th>
                   <th>{arr.population}</th>
-                  <th>{arr.cases}</th>
+                  <th id={styles.cases}>{arr.cases}</th>
                   <th id={styles.rec}>{arr.recovered}</th>
                   <th id={styles.dead}>{arr.deaths}</th>
-                  <th>{arr.todayCases}</th>
+                  <th id={styles.cases}>{arr.todayCases}</th>
                   <th id={styles.rec}>{arr.todayRecovered}</th>
                   <th id={styles.dead}>{arr.todayDeaths}</th>
-                  <th>{arr.active}</th>
+                  <th id={styles.cases}>{arr.active}</th>
                   <th id={styles.crt}>{arr.critical}</th>
                   <th>{arr.casesPerOneMillion}</th>
                   <th id={styles.dead}>{arr.deathsPerOneMillion}</th>
