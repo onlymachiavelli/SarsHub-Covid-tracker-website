@@ -55,19 +55,49 @@ const World = () => {
                     />
                   </th>
                   <th>{arr.population}</th>
-                  <th id={styles.cases}>{arr.cases}</th>
-                  <th id={styles.rec}>{arr.recovered}</th>
-                  <th id={styles.dead}>{arr.deaths}</th>
-                  <th id={styles.cases}>{arr.todayCases}</th>
-                  <th id={styles.rec}>{arr.todayRecovered}</th>
-                  <th id={styles.dead}>{arr.todayDeaths}</th>
-                  <th id={styles.cases}>{arr.active}</th>
-                  <th id={styles.crt}>{arr.critical}</th>
+                  <th id={Number(arr.cases) > 0 ? styles.cases : ""}>
+                    {arr.cases}
+                  </th>
+                  <th id={Number(arr.recovered) > 0 ? styles.rec : ""}>
+                    {arr.recovered}
+                  </th>
+                  <th id={Number(arr.deaths) > 0 ? styles.dead : ""}>
+                    {arr.deaths}
+                  </th>
+                  <th id={Number(arr.todayCases) > 0 ? styles.cases : " "}>
+                    {arr.todayCases}
+                  </th>
+                  <th id={Number(arr.todayRecovered) > 0 ? styles.rec : ""}>
+                    {arr.todayRecovered}
+                  </th>
+                  <th id={Number(arr.todayDeaths) > 0 ? styles.dead : ""}>
+                    {arr.todayDeaths}
+                  </th>
+                  <th id={Number(arr.active) > 0 ? styles.cases : ""}>
+                    {arr.active}
+                  </th>
+                  <th id={Number(arr.critical) > 0 ? styles.crt : ""}>
+                    {arr.critical}
+                  </th>
                   <th>{arr.casesPerOneMillion}</th>
-                  <th id={styles.dead}>{arr.deathsPerOneMillion}</th>
+                  <th
+                    id={Number(arr.deathsPerOneMillion) > 0 ? styles.dead : ""}
+                  >
+                    {arr.deathsPerOneMillion}
+                  </th>
                   <th>{arr.activePerOneMillion}</th>
-                  <th id={styles.rec}>{arr.recoveredPerOneMillion}</th>
-                  <th id={styles.crt}>{arr.criticalPerOneMillion}</th>
+                  <th
+                    id={
+                      Number(arr.recoveredPerOneMillion) > 0 ? styles.rec : ""
+                    }
+                  >
+                    {arr.recoveredPerOneMillion}
+                  </th>
+                  <th
+                    id={Number(arr.criticalPerOneMillion) > 0 ? styles.crt : ""}
+                  >
+                    {arr.criticalPerOneMillion}
+                  </th>
                   <th>{arr.tests}</th>
                   <th>{arr.testsPerOneMillion}</th>
                   <th>{arr.oneCasePerPeople}</th>
