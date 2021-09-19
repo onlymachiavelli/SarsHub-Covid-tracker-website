@@ -45,7 +45,11 @@ const World = () => {
                   <th>{idx + 1}</th>
                   <th>{arr.country}</th>
                   <th>{arr.continent}</th>
-                  <th>{lan.table.flag}</th>
+                  <th>
+                    <img
+                      src={`https://www.countryflags.io/${arr.countryInfo.iso2}/flat/64.png`}
+                    />
+                  </th>
                   <th>{arr.population}</th>
                   <th id={styles.cases}>{arr.cases}</th>
                   <th id={styles.rec}>{arr.recovered}</th>
