@@ -35,35 +35,37 @@ const World = () => {
           <th>{lan.table.ocpp}</th>
           <th>{lan.table.odpp}</th>
         </tr>
-        {datas.map((arr, idx) => {
-          if (arr.country.toLowerCase() !== "israel") {
-            return (
-              <tr key={`arr-${idx}`} id={styles.res}>
-                <th>{idx + 1}</th>
-                <th>{arr.country}</th>
-                <th>{arr.continent}</th>
-                <th>{lan.table.flag}</th>
-                <th>{arr.population}</th>
-                <th>{arr.cases}</th>
-                <th>{arr.recovered}</th>
-                <th>{arr.todayCases}</th>
-                <th>{arr.todayRecovered}</th>
-                <th>{arr.todayDeaths}</th>
-                <th>{arr.active}</th>
-                <th>{arr.critical}</th>
-                <th>{arr.casesPerOneMillion}</th>
-                <th>{arr.deathsPerOneMillion}</th>
-                <th>{arr.activePerOneMillion}</th>
-                <th>{arr.recoveredPerOneMillion}</th>
-                <th>{arr.criticalPerOneMillion}</th>
-                <th>{arr.tests}</th>
-                <th>{arr.testsPerOneMillion}</th>
-                <th>{arr.oneCasePerPeople}</th>
-                <th>{arr.oneDeathPerPeople}</th>
-              </tr>
-            )
-          }
-        })}
+        {datas
+          .sort((a, b) => b.cases - a.cases)
+          .map((arr, idx) => {
+            if (arr.country.toLowerCase() !== "israel") {
+              return (
+                <tr key={`arr-${idx}`} id={styles.res}>
+                  <th>{idx + 1}</th>
+                  <th>{arr.country}</th>
+                  <th>{arr.continent}</th>
+                  <th>{lan.table.flag}</th>
+                  <th>{arr.population}</th>
+                  <th>{arr.cases}</th>
+                  <th>{arr.recovered}</th>
+                  <th>{arr.todayCases}</th>
+                  <th>{arr.todayRecovered}</th>
+                  <th>{arr.todayDeaths}</th>
+                  <th>{arr.active}</th>
+                  <th>{arr.critical}</th>
+                  <th>{arr.casesPerOneMillion}</th>
+                  <th>{arr.deathsPerOneMillion}</th>
+                  <th>{arr.activePerOneMillion}</th>
+                  <th>{arr.recoveredPerOneMillion}</th>
+                  <th>{arr.criticalPerOneMillion}</th>
+                  <th>{arr.tests}</th>
+                  <th>{arr.testsPerOneMillion}</th>
+                  <th>{arr.oneCasePerPeople}</th>
+                  <th>{arr.oneDeathPerPeople}</th>
+                </tr>
+              )
+            }
+          })}
       </table>
     </div>
   )
