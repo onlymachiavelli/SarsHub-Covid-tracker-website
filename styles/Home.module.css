@@ -362,4 +362,5 @@
 
 #cases {
   background: rgb(184, 187, 12) !important;
+  border-top: 10px solid rgb(131, 133, 9);
 }
