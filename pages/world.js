@@ -52,13 +52,13 @@ const World = () => {
               <th>{arr.critical}</th>
               <th>{arr.casesPerOneMillion}</th>
               <th>{arr.deathsPerOneMillion}</th>
-              <th>{lan.table.apom}</th>
-              <th>{lan.table.rpom}</th>
-              <th>{lan.table.crpom}</th>
-              <th>{lan.table.tests}</th>
-              <th>{lan.table.tpom}</th>
-              <th>{lan.table.ocpp}</th>
-              <th>{lan.table.odpp}</th>
+              <th>{arr.activePerOneMillion}</th>
+              <th>{arr.recoveredPerOneMillion}</th>
+              <th>{arr.criticalPerOneMillion}</th>
+              <th>{arr.tests}</th>
+              <th>{arr.testsPerOneMillion}</th>
+              <th>{arr.oneCasePerPeople}</th>
+              <th>{arr.oneDeathPerPeople}</th>
             </tr>
           )
         })}
