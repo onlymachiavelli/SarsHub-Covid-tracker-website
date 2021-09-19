@@ -3,6 +3,10 @@ import styles from "./../styles/World.module.css"
 import { WorldCases } from "./../src/apiCall/worldcovid"
 import { Language } from "./../src/UI/language"
 const World = () => {
+  useEffect(() => {
+    document.title = "ALL COVID CASES "
+  }, [])
+
   const [lan, setLan] = useState(Language.English)
   const [datas, setDatas] = useState([])
   WorldCases().then((res) => {
