@@ -21,7 +21,6 @@ const World = () => {
           <th>{lan.table.tcases}</th>
           <th>{lan.table.trec}</th>
           <th>{lan.table.tdcases}</th>
-          <th>{lan.table.tdcases}</th>
           <th>{lan.table.tdrec}</th>
           <th>{lan.table.tddeaths}</th>
           <th>{lan.table.active}</th>
@@ -44,16 +43,15 @@ const World = () => {
               <th>{arr.continent}</th>
               <th>{lan.table.flag}</th>
               <th>{arr.population}</th>
-              <th>{lan.table.tcases}</th>
-              <th>{lan.table.trec}</th>
-              <th>{lan.table.tdcases}</th>
-              <th>{lan.table.tdcases}</th>
-              <th>{lan.table.tdrec}</th>
-              <th>{lan.table.tddeaths}</th>
-              <th>{lan.table.active}</th>
-              <th>{lan.table.critical}</th>
-              <th>{lan.table.cpom}</th>
-              <th>{lan.table.dpom}</th>
+              <th>{arr.cases}</th>
+              <th>{arr.recovered}</th>
+              <th>{arr.todayCases}</th>
+              <th>{arr.todayRecovered}</th>
+              <th>{arr.todayDeaths}</th>
+              <th>{arr.active}</th>
+              <th>{arr.critical}</th>
+              <th>{arr.casesPerOneMillion}</th>
+              <th>{arr.deathsPerOneMillion}</th>
               <th>{lan.table.apom}</th>
               <th>{lan.table.rpom}</th>
               <th>{lan.table.crpom}</th>
