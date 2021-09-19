@@ -19,5 +19,16 @@
 
 #res th {
   background: none;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 5px 10px 5px;
+}
+
+#rec {
+  background: #0ab83b !important;
+}
+
+#dead {
+  background: #e71c1c !important;
+}
+#crt {
+  background: #dc6565 !important;
 }

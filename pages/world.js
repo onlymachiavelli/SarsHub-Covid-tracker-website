@@ -20,6 +20,7 @@ const World = () => {
           <th>{lan.table.population}</th>
           <th>{lan.table.tcases}</th>
           <th>{lan.table.trec}</th>
+          <th>{lan.table.tdeaths}</th>
           <th>{lan.table.tdcases}</th>
           <th>{lan.table.tdrec}</th>
           <th>{lan.table.tddeaths}</th>
@@ -47,17 +48,18 @@ const World = () => {
                   <th>{lan.table.flag}</th>
                   <th>{arr.population}</th>
                   <th>{arr.cases}</th>
-                  <th>{arr.recovered}</th>
+                  <th id={styles.rec}>{arr.recovered}</th>
+                  <th id={styles.dead}>{arr.deaths}</th>
                   <th>{arr.todayCases}</th>
-                  <th>{arr.todayRecovered}</th>
-                  <th>{arr.todayDeaths}</th>
+                  <th id={styles.rec}>{arr.todayRecovered}</th>
+                  <th id={styles.dead}>{arr.todayDeaths}</th>
                   <th>{arr.active}</th>
-                  <th>{arr.critical}</th>
+                  <th id={styles.crt}>{arr.critical}</th>
                   <th>{arr.casesPerOneMillion}</th>
-                  <th>{arr.deathsPerOneMillion}</th>
+                  <th id={styles.dead}>{arr.deathsPerOneMillion}</th>
                   <th>{arr.activePerOneMillion}</th>
-                  <th>{arr.recoveredPerOneMillion}</th>
-                  <th>{arr.criticalPerOneMillion}</th>
+                  <th id={styles.rec}>{arr.recoveredPerOneMillion}</th>
+                  <th id={styles.crt}>{arr.criticalPerOneMillion}</th>
                   <th>{arr.tests}</th>
                   <th>{arr.testsPerOneMillion}</th>
                   <th>{arr.oneCasePerPeople}</th>
