@@ -392,4 +392,31 @@
 .footer {
   width: 100%;
   height: auto;
+  background: #13181e;
+  padding-top: 20px;
+  overflow: hidden;
+}
+.footer_logo {
+  width: 100%;
+  text-align: center;
+}
+.footer_scl {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+.footer_scl a {
+  margin: 5px;
+}
+
+#mail {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 20px;
+}
+.copy {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
 }

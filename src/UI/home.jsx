@@ -10,10 +10,6 @@ import {
 import styles from "./../../styles/Home.module.css"
 import Link from "next/link"
 
-
-
-
-
 const Home = (props) => {
   return (
     <div className={styles.home_container}>
@@ -23,7 +19,9 @@ const Home = (props) => {
         </div>
         <div className={styles.mainlogo}>
           <Link href="/">
-            <a><SarsHub /></a>
+            <a>
+              <SarsHub />
+            </a>
           </Link>
         </div>
         <div
@@ -36,35 +34,31 @@ const Home = (props) => {
               src={
                 props.countryC
                   ? `https://www.countryflags.io/${props.countryC}/flat/64.png`
-                  : ''
+                  : ""
               }
             />
           </div>
         </div>
       </header>
 
-      <div className={styles.ff}>
-
-        {props.worldcovidcomponent}
-      </div>
-
+      <div className={styles.ff}>{props.worldcovidcomponent}</div>
 
       <div className={styles.bto}>
         <div className={styles.social}>
           <a href="https://github.com/onlymachiavelli">
-            <Github />
+            <Github d={"16"} />
           </a>
           &nbsp;&nbsp;
           <a href="https://twitter.com/onlymachiavelli">
-            <Twitter />
+            <Twitter d={"16"} />
           </a>
           &nbsp;&nbsp;
           <a href="https://instagram.com/onlymachiavelli">
-            <Instagram />
+            <Instagram d={"16"} />
           </a>
           &nbsp;&nbsp;
           <a href="https://www.linkedin.com/in/alaa-ddin-472a651b9/">
-            <Linkedin />
+            <Linkedin d={"15"} />
           </a>
         </div>
         <div className={styles.languageselector}></div>

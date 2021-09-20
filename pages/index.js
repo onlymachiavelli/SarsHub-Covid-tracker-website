@@ -123,6 +123,7 @@ const App = () => {
           <p>COVID SUS ! HE’S THE IMPOSTOR</p>
           <p id={styles.alert}>VOTE HIM OUT : BY GETTING VACCINATED</p>
         </div>
+        <Footer />
       </div>
       <div id="what" style={{ color: "#fff" }}>
         ARE YOU USING NOKIA 3310 !!!!! GET SOMETHING BIG ! THESE ARE THE ONLY
