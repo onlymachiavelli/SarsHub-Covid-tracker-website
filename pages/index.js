@@ -4,16 +4,18 @@ import Image from "next/image"
 import styles from "../styles/Home.module.css"
 import Home from "./../src/UI/home"
 import { Language as L } from "./../src/UI/language"
-import WorldInfo from './../src/UI/WorldWideInfo'
+import WorldInfo from "./../src/UI/WorldWideInfo"
 import CurrentCountry from "../src/UI/CurrentCountry"
-import coffin from './../public/coffin.png'
-import { Search } from './../src/UI/SVG'
-import Link from 'next/link'
-import CovidSearch, { SearchResult } from './../src/UI/search'
-import useCountry from './../src/useHooks/useCountry'
-import useWorldCovid from './../src/useHooks/useWorldcovid'
-import useGetCovidStatsByGeo from './../src/useHooks/useGetCovidStatsByGeo'
-import useSearch from './../src/useHooks/useSearch'
+import coffin from "./../public/coffin.png"
+import { Search } from "./../src/UI/SVG"
+import Link from "next/link"
+import CovidSearch, { SearchResult } from "./../src/UI/search"
+import useCountry from "./../src/useHooks/useCountry"
+import useWorldCovid from "./../src/useHooks/useWorldcovid"
+import useGetCovidStatsByGeo from "./../src/useHooks/useGetCovidStatsByGeo"
+import useSearch from "./../src/useHooks/useSearch"
+import IMG1 from "./../public/1.png"
+import IMG2 from "./../public/amougus.png"
 const App = () => {
   const { Wcovid } = useWorldCovid()
   const { country, setCountry } = useCountry()
@@ -40,7 +42,6 @@ const App = () => {
               tcases={Wcovid.totalcases}
               tdeaths={Wcovid.totaldeaths}
               trec={Wcovid.totalrecovered}
-
               tdcases={Wcovid.todaycases}
               tddeaths={Wcovid.todaydeaths}
               tdrec={Wcovid.todayrecovered}
@@ -50,7 +51,6 @@ const App = () => {
           }
         />
 
-
         <CurrentCountry
           titles={Lan.cards}
           flag={country.CountryCode}
@@ -58,7 +58,6 @@ const App = () => {
           tcases={Gstats.totalcases}
           tdeaths={Gstats.totaldeaths}
           trec={Gstats.totalrecovered}
-
           tdcases={Gstats.todaycases}
           tddeaths={Gstats.todaydeaths}
           tdrec={Gstats.todayrecovered}
@@ -66,40 +65,44 @@ const App = () => {
           crit={Gstats.critical}
         />
 
-        <div style={{ textAlign: "center", paddingTop: "30px", display: "block" }}><Image src={coffin} width="500" height="250" /></div>
+        <div
+          style={{ textAlign: "center", paddingTop: "30px", display: "block" }}
+        >
+          <Image src={coffin} width="500" height="250" />
+        </div>
         <div className={styles.searchinp}>
-          <p className={styles.gl_title}>
-            {Lan.cosearch}
-          </p>
+          <p className={styles.gl_title}>{Lan.cosearch}</p>
           <div className={styles.input}>
-            <div style={{ width: "100%", height: "100%" }} >
-              <input type="text" placeholder="Enter Country" value={countrysearch} onChange={e => setCountrySearch(e.target.value)} />
-              <button type={"submit"} onClick={
-                () => {
-
+            <div style={{ width: "100%", height: "100%" }}>
+              <input
+                type="text"
+                placeholder="Enter Country"
+                value={countrysearch}
+                onChange={(e) => setCountrySearch(e.target.value)}
+              />
+              <button
+                type={"submit"}
+                onClick={() => {
                   handleSearch()
                   setVisibility("block")
-                }
-              } >
+                }}
+              >
                 <Search />
               </button>
             </div>
-
           </div>
           <p></p>
           <Link href="/world">{Lan.worldlist}</Link>
-          <br /><br />
+          <br />
+          <br />
           <CovidSearch
             visibility={vsble}
             flag={result.flag}
             titles={Lan.cards}
-
-
             country={result.country}
             tcases={result.totalcases}
             tdeaths={result.totaldeaths}
             trec={result.totalrecovered}
-
             tdcases={result.todaycases}
             tddeaths={result.todaydeaths}
             tdrec={result.todayrecovered}
@@ -107,14 +110,17 @@ const App = () => {
             crit={result.critical}
           />
         </div>
-        <br /><br />
+        <br />
+        <br />
 
-
+        <div className={styles.am}>
+          <Image src={IMG2} width="200" height="300" />
+          <Image src={IMG1} width="250" height="250" />
+        </div>
       </div>
       <div id="what" style={{ color: "#fff" }}>
-        ARE YOU USING NOKIA 3310 !!!!!
-        GET SOMETHING BIG !
-        THESE ARE THE ONLY INFORMATIONS THAT CAN FIT IN YOUR SCREEN !
+        ARE YOU USING NOKIA 3310 !!!!! GET SOMETHING BIG ! THESE ARE THE ONLY
+        INFORMATIONS THAT CAN FIT IN YOUR SCREEN !
         <br />
         World Infos
         <br />
@@ -133,9 +139,9 @@ const App = () => {
         {Lan.cards.activecases + " : " + Wcovid.activecases}
         <br />
         {Lan.cards.critical + " : " + Gstats.critical}
-        <br /><br />
+        <br />
+        <br />
         {country.Country + " Informations"}
-
         <br />
         {Lan.cards.totalcases + " : " + Gstats.totalcases}
         <br />
@@ -143,7 +149,6 @@ const App = () => {
         <br />
         {Lan.cards.totalrecoveredcases + " : " + Gstats.totalrecovered}
         <br />
-
         {Lan.cards.todaycases + " : + " + Gstats.todaycases}
         <br />
         {Lan.cards.todaydeaths + " : + " + Gstats.todaydeaths}
@@ -154,9 +159,7 @@ const App = () => {
         <br />
         {Lan.cards.critical + " : " + Gstats.critical}
       </div>
-    </div >
-
-
+    </div>
   )
 }
 export default App
