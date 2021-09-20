@@ -16,6 +16,7 @@ import useGetCovidStatsByGeo from "./../src/useHooks/useGetCovidStatsByGeo"
 import useSearch from "./../src/useHooks/useSearch"
 import IMG1 from "./../public/1.png"
 import IMG2 from "./../public/amougus.png"
+import Footer from "./../src/UI/footer"
 const App = () => {
   const { Wcovid } = useWorldCovid()
   const { country, setCountry } = useCountry()
@@ -116,6 +117,11 @@ const App = () => {
         <div className={styles.am}>
           <Image src={IMG2} width="200" height="300" />
           <Image src={IMG1} width="250" height="250" />
+        </div>
+
+        <div className={styles.alert}>
+          <p>COVID SUS ! HE’S THE IMPOSTOR</p>
+          <p id={styles.alert}>VOTE HIM OUT : BY GETTING VACCINATED</p>
         </div>
       </div>
       <div id="what" style={{ color: "#fff" }}>

@@ -372,3 +372,24 @@
   align-items: center;
   justify-content: center;
 }
+
+.alert {
+  width: 100%;
+  height: auto;
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+}
+.alert p {
+  font-weight: bold;
+  color: #fff;
+  font-size: 40px;
+}
+
+#alert {
+  color: #f44747 !important;
+}
+.footer {
+  width: 100%;
+  height: auto;
+}
