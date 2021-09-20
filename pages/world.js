@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import styles from "./../styles/World.module.css"
 import { WorldCases } from "./../src/apiCall/worldcovid"
 import { Language } from "./../src/UI/language"
+import { SarsHub } from "../src/UI/SVG"
+import Link from "next/link"
 const World = () => {
   useEffect(() => {
     document.title = "ALL COVID CASES "
@@ -15,6 +17,15 @@ const World = () => {
 
   return (
     <div className={styles.world}>
+      <header className={styles.header}>
+        <nav>
+          <Link href="/">
+            <a>
+              <SarsHub />
+            </a>
+          </Link>
+        </nav>
+      </header>
       <table className={styles.table}>
         <tr>
           <th>{lan.table.lvl}</th>

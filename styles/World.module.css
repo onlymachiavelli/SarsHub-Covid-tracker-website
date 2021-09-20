@@ -35,3 +35,13 @@
 #cases {
   background: rgb(184, 187, 12) !important;
 }
+
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background-color: #13181e;
+}

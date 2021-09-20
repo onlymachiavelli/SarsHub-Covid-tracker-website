@@ -18,16 +18,19 @@ const Footer = () => {
         <SarsHub />
       </div>
       <div className={styles.footer_scl}>
-        <a href="" target="_blank">
+        <a href="https://github.com/onlymachiavelli" target="_blank">
           <Github d="29" />
         </a>
-        <a href="" target="_blank">
+        <a href="https://twitter.com/onlymachiavelli" target="_blank">
           <Twitter d="30" />
         </a>
-        <a href="" target="_blank">
+        <a href="https://instagram.com/onlymachiavelli" target="_blank">
           <Instagram d="30" />
         </a>
-        <a href="" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/alaa-ddin-472a651b9/"
+          target="_blank"
+        >
           <Linkedin d="29" />
         </a>
         <br />
