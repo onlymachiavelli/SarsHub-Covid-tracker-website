@@ -1,6 +1,6 @@
 import React from "react"
 import {} from "./SVG"
-import styles from "./../../styles/Home.modules.css"
+import styles from "./../../styles/Home.module.css"
 
 const Footer = () => {
   return (
