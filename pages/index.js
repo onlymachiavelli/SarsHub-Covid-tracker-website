@@ -31,7 +31,6 @@ const App = () => {
   useEffect(() => {
     document.title = Lan.windowtitle
   }, [Lan])
-  useLanguage()
   return (
     <div className={styles.pg}>
       <div id="page">
