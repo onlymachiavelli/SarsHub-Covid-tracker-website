@@ -21,12 +21,12 @@ import useLanguage from "./../src/useHooks/useLanguage"
 const App = () => {
   const { Wcovid } = useWorldCovid()
   const { country, setCountry } = useCountry()
-  const [Lan, setLan] = useState(L.English)
+
   const [vsble, setVisibility] = useState("none")
   const { Gstats } = useGetCovidStatsByGeo()
   const { result, handleSearch, countrysearch, setCountrySearch } = useSearch()
-
-  console.log({ result })
+  const { language, newlan, setNewLan, changeLang } = useLanguage()
+  const [Lan, setLan] = useState(L[language])
 
   useEffect(() => {
     document.title = Lan.windowtitle
