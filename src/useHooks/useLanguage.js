@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react"
 
-const useSearch = () => {}
+const useLanguage = () => {
+  const [language, setLanguage] = useState("")
+  useEffect(() => {}, [])
+}
 
-export default useSearch
+export default useLanguage

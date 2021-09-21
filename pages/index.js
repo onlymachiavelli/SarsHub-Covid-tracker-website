@@ -17,6 +17,7 @@ import useSearch from "./../src/useHooks/useSearch"
 import IMG1 from "./../public/1.png"
 import IMG2 from "./../public/amougus.png"
 import Footer from "./../src/UI/footer"
+import useLanguage from "./../src/useHooks/useLanguage"
 const App = () => {
   const { Wcovid } = useWorldCovid()
   const { country, setCountry } = useCountry()
@@ -30,7 +31,7 @@ const App = () => {
   useEffect(() => {
     document.title = Lan.windowtitle
   }, [Lan])
-
+  useLanguage()
   return (
     <div className={styles.pg}>
       <div id="page">
