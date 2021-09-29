@@ -30,6 +30,10 @@ const App = () => {
 
   useEffect(() => {
     document.title = Lan.windowtitle
+    // just to embarrass my friend lol
+    if (window.self !== window.top) {
+      window.top.location.href = window.location.href
+    }
   }, [Lan])
   return (
     <div className={styles.pg}>
