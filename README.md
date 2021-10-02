@@ -1,6 +1,5 @@
 <img src="https://github.com/onlymachiavelli/SarsHub/blob/main/public/1.png" width="210"/>
-<img src="https://github.com/onlymachiavelli/SarsHub/blob/main/public/1.png" width="210"/>
-<img src="https://github.com/onlymachiavelli/SarsHub/blob/main/public/1.png" width="210"/>
+
 <br/>
 <h1 color="red">SarsHub</h1>
 <br/>
