@@ -113,7 +113,7 @@ const App = () => {
         </div>
         <br />
         <br />
-
+ 
         <div className={styles.am}>
           <Image src={IMG2} width="200" height="270" />
           <Image src={IMG1} width="250" height="250" />
