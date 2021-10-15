@@ -377,11 +377,12 @@
   display: block;
   text-align: center;
   margin-top: 50px;
+  padding-bottom: 20px;
 }
 .alert p {
   font-weight: bold;
   color: #fff;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 #alert {
