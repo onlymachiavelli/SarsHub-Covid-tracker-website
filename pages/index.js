@@ -115,8 +115,8 @@ const App = () => {
         <br />
  
         <div className={styles.am}>
-          <Image src={IMG2} width="200" height="270" />
-          <Image src={IMG1} width="250" height="250" />
+          <Image src={IMG2} width="130" height="190" />
+          <Image src={IMG1} width="180" height="180" />
         </div>
 
         <div className={styles.alert}>

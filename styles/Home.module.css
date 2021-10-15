@@ -419,3 +419,15 @@
   color: #fff;
   font-weight: bold;
 }
+
+@media (max-width: 688px) {
+  .alert p {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 442px) {
+  .alert p {
+    font-size: 17px;
+  }
+}
