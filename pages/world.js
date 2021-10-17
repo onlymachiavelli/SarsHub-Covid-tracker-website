@@ -76,13 +76,13 @@ const World = () => {
                     {arr.deaths}
                   </th>
                   <th id={Number(arr.todayCases) > 0 ? styles.cases : " "}>
-                    {arr.todayCases}
+                    + {arr.todayCases}
                   </th>
                   <th id={Number(arr.todayRecovered) > 0 ? styles.rec : ""}>
-                    {arr.todayRecovered}
+                    + {arr.todayRecovered}
                   </th>
                   <th id={Number(arr.todayDeaths) > 0 ? styles.dead : ""}>
-                    {arr.todayDeaths}
+                    + {arr.todayDeaths}
                   </th>
                   <th id={Number(arr.active) > 0 ? styles.cases : ""}>
                     {arr.active}
