@@ -45,3 +45,9 @@
   padding: 5px;
   background-color: #13181e;
 }
+
+.fixed {
+  top: 0;
+  position: sticky;
+  border-top: 1px solid #fff !important;
+}

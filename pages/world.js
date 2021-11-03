@@ -27,7 +27,7 @@ const World = () => {
         </nav>
       </header>
       <table className={styles.table}>
-        <tr>
+        <tr className={styles.fixed}>
           <th>{lan.table.lvl}</th>
           <th>{lan.table.country}</th>
           <th>{lan.table.continent}</th>
