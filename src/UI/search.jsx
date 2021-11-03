@@ -3,18 +3,13 @@ import { Search } from "./SVG"
 import styles from "./../../styles/Home.module.css"
 import getcovByCountr from "./../apiCall/covbycountry"
 const CovidSearch = (props) => {
+  let countryflag = `https://flagcdn.com/w80/${props.flag}.png`
+  countryflag = countryflag.toLowerCase()
   return (
     <div className={styles.searchResult} style={{ display: props.visibility }}>
       <div className={styles.ContainerCu}>
         <div className={styles.cflag}>
-          <img
-            id={styles.flag_cur}
-            src={
-              props.flag
-                ? `https://www.countryflags.io/${props.flag}/flat/64.png`
-                : ""
-            }
-          />
+          <img id={styles.flag_cur} src={props.flag ? countryflag : ""} />
           <p id={styles.cname}>{props.country}</p>
         </div>
         <div className={styles.currentflex}>

@@ -2,6 +2,8 @@ import React from "react"
 import styles from "./../../styles/Home.module.css"
 
 const CurrentCountry = (props) => {
+  let countryflag = `https://flagcdn.com/w80/${props.flag}.png`
+  countryflag = countryflag.toLowerCase()
   return (
     <div className={styles.current_country_container}>
       <div style={{ textAlign: "center" }}>
@@ -10,14 +12,7 @@ const CurrentCountry = (props) => {
       </div>
       <div className={styles.ContainerCu}>
         <div className={styles.cflag}>
-          <img
-            id={styles.flag_cur}
-            src={
-              props.flag
-                ? `https://www.countryflags.io/${props.flag}/flat/64.png`
-                : ""
-            }
-          />
+          <img id={styles.flag_cur} src={props.flag ? countryflag : ""} />
           <p id={styles.cname}>
             {props.country === "Tunisia"
               ? props.country + " Lkalba"
