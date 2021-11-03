@@ -11,6 +11,8 @@ import styles from "./../../styles/Home.module.css"
 import Link from "next/link"
 
 const Home = (props) => {
+  let countryflag = `https://flagcdn.com/w40/${props.countryC}.png`
+  countryflag = countryflag.toLowerCase()
   return (
     <div className={styles.home_container}>
       <header className={styles.header}>
@@ -30,13 +32,7 @@ const Home = (props) => {
         >
           <p>{props.country}</p> &nbsp;
           <div className={styles.flag_geo}>
-            <img
-              src={
-                props.countryC
-                  ? `https://www.countryflags.io/${props.countryC}/flat/64.png`
-                  : ""
-              }
-            />
+            <img src={props.countryC ? countryflag : ""} />
           </div>
         </div>
       </header>
