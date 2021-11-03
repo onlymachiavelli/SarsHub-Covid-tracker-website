@@ -55,15 +55,15 @@ const World = () => {
           .sort((a, b) => b.cases - a.cases)
           .map((arr, idx) => {
             if (arr.country.toLowerCase() !== "israel") {
+              let countryflag = `https://flagcdn.com/w80/${arr.countryInfo.iso2}.png`
+              countryflag = countryflag.toLowerCase()
               return (
                 <tr key={`arr-${idx}`} id={styles.res}>
                   <th>{idx + 1}</th>
                   <th>{arr.country}</th>
                   <th>{arr.continent}</th>
                   <th>
-                    <img
-                      src={`https://www.countryflags.io/${arr.countryInfo.iso2}/flat/64.png`}
-                    />
+                    <img src={countryflag} />
                   </th>
                   <th>{arr.population}</th>
                   <th id={Number(arr.cases) > 0 ? styles.cases : ""}>
