@@ -24,8 +24,7 @@ const useSearch = () => {
           activecases: res.active,
           critical: res.critical,
           flag: res.countryInfo.iso2,
-          country:
-            res.country == "Tunisia" ? res.country + " Lkalba" : res.country,
+          country: res.country == "Ukraine" ? " #Slava_Ukraini" : res.country,
         })
       })
   }
