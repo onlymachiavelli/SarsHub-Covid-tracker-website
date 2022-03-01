@@ -1,5 +1,5 @@
 .world {
-  width: 100%;
+  width: auto;
   height: auto;
 }
 .table {
@@ -37,7 +37,7 @@
 }
 
 .header {
-  width: 100%;
+  width: auto;
   height: auto;
   display: flex;
   align-items: center;
@@ -45,7 +45,9 @@
   padding: 5px;
   background-color: #13181e;
 }
-
+.header nav {
+  width: 100%;
+}
 .fixed {
   top: 0;
   position: sticky;

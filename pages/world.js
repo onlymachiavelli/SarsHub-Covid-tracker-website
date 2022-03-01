@@ -60,7 +60,9 @@ const World = () => {
               return (
                 <tr key={`arr-${idx}`} id={styles.res}>
                   <th>{idx + 1}</th>
-                  <th>{arr.country}</th>
+                  <th>
+                    {arr.country === "Ukraine" ? "#Slava_Ukraini" : arr.country}
+                  </th>
                   <th>{arr.continent}</th>
                   <th>
                     <img src={countryflag} />
