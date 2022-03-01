@@ -55,7 +55,9 @@ const App = () => {
         <CurrentCountry
           titles={Lan.cards}
           flag={country.CountryCode}
-          country={country.Country}
+          country={
+            country.Country === "Ukraine" ? "#Slava_Ukraini" : country.Country
+          }
           tcases={Gstats.totalcases}
           tdeaths={Gstats.totaldeaths}
           trec={Gstats.totalrecovered}
@@ -113,7 +115,7 @@ const App = () => {
         </div>
         <br />
         <br />
- 
+
         <div className={styles.am}>
           <Image src={IMG2} width="130" height="190" />
           <Image src={IMG1} width="180" height="180" />
